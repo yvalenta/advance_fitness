@@ -2,6 +2,16 @@
 <html lang="es-CO">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYKPW869SJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EYKPW869SJ');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -14,6 +24,7 @@
   <meta name="author" content="Advance Fitness" />
   <link rel="canonical" href="https://www.tudominio.com/" />
   <meta name="robots" content="index, follow" />
+
 
   <!-- ══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ══ -->
   <meta property="og:type" content="website" />
@@ -33,16 +44,41 @@
     content="Entrena sin excusas. Coaching 100% digital con entrenador personal certificado, plan de alimentación y seguimiento." />
   <meta name="twitter:image" content="https://www.tudominio.com/ruta-a-tu-imagen-og.jpg" />
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthClub",
+      "name": "Advance Fitness Medellín",
+      "priceRange": "$350.000 COP",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Medellín",
+        "addressRegion": "Antioquia",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "6.2442", 
+        "longitude": "-75.5736"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Plan Advance Élite Presencial",
+        "price": "350000",
+        "priceCurrency": "COP"
+      }
+    }
+  </script>
   <!-- ══ SCHEMA.ORG JSON-LD ══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "Advance Fitness",
-    "image": "https://www.tudominio.com/ruta-al-logo.png",
-    "@id": "https://www.tudominio.com/",
-    "url": "https://www.tudominio.com/",
-    "telephone": "+573000000000",
+    "image": "https://advance-fitness.ynt.codes/img/img2.JPG",
+    "@id": "https://advance-fitness.ynt.codes/",
+    "url": "https://advance-fitness.ynt.codes/",
+    "telephone": "+573126703080",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -533,7 +569,7 @@
             class="gradient-crimson text-white font-bold text-sm py-4 px-8 rounded-xl text-center tracking-widest uppercase hover:opacity-92 transition-opacity shadow-crimson">
             Elegir Mi Plan →
           </a>
-          <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20saber%20más%20sobre%20el%20coaching%20digital%20de%20Advance%20Fitness"
+          <a href="https://wa.me/573126703080?text=Hola%2C%20quiero%20saber%20más%20sobre%20el%20coaching%20digital%20de%20Advance%20Fitness"
             target="_blank" rel="noopener noreferrer" aria-label="Hablar con un Coach por WhatsApp"
             class="border border-white/20 text-white font-semibold text-sm py-4 px-8 rounded-xl text-center hover:border-crimson hover:text-crimson transition-colors">
             Hablar con un Coach
@@ -858,7 +894,7 @@
             <span class="font-display text-crimson tracking-widest text-sm" x-text="planCode"></span>
             <span class="text-silver/40 text-xs ml-auto">15% descuento inicial</span>
           </div>
-          <a id="cta-btn" :href="'https://wa.me/573000000000?text=' + waMsg" target="_blank" rel="noopener noreferrer"
+          <a id="cta-btn" :href="'https://wa.me/573126703080?text=' + waMsg" target="_blank" rel="noopener noreferrer"
             aria-label="Contratar plan por WhatsApp"
             class="block w-full gradient-crimson text-white font-bold text-base py-4 rounded-xl text-center tracking-widest uppercase shadow-crimson hover:opacity-92 transition-opacity mb-3">
             🏋️ QUIERO ESTE PLAN — ESCRIBIR POR WHATSAPP
@@ -1069,7 +1105,7 @@
               Todo por <strong class="text-white">WhatsApp</strong> — sin apps extra
             </div>
           </div>
-          <a :href="'https://wa.me/573000000000?text=' + waMsg" target="_blank" rel="noopener noreferrer"
+          <a :href="'https://wa.me/573126703080?text=' + waMsg" target="_blank" rel="noopener noreferrer"
             aria-label="Empezar transformación por WhatsApp"
             class="block w-full gradient-crimson text-white font-bold text-lg py-4 rounded-xl text-center tracking-widest uppercase shadow-crimson hover:opacity-92 transition-opacity mb-3">
             🏋️ EMPEZAR MI TRANSFORMACIÓN
@@ -1191,7 +1227,7 @@
       <div class="flex justify-center gap-5 mt-5 text-xs text-silver/20">
         <a href="#" class="hover:text-silver/50 transition-colors">Términos</a>
         <a href="#" class="hover:text-silver/50 transition-colors">Privacidad</a>
-        <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/573126703080" target="_blank" rel="noopener noreferrer"
           class="hover:text-silver/50 transition-colors">Contacto</a>
       </div>
       <p class="text-silver/12 text-xs mt-4">© 2026 Advance Fitness · Todos los derechos reservados</p>
@@ -1208,7 +1244,7 @@
         <p class="text-white text-xs font-semibold truncate" x-text="planName"></p>
         <p class="text-crimson text-[10px] font-bold" x-text="planPrice + ' / mes'"></p>
       </div>
-      <a :href="'https://wa.me/573000000000?text=' + waMsg" target="_blank" rel="noopener noreferrer"
+      <a :href="'https://wa.me/573126703080?text=' + waMsg" target="_blank" rel="noopener noreferrer"
         aria-label="Empezar ahora por WhatsApp"
         class="gradient-crimson text-white text-xs font-bold px-5 py-2.5 rounded-xl whitespace-nowrap tracking-wide uppercase">
         EMPEZAR →

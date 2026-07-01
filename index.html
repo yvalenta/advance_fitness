@@ -1,129 +1,17 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYKPW869SJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-EYKPW869SJ');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advance Fitness · Coaching Digital Personalizado · Medellín</title>
 
-  <!-- ══ SEO BÁSICO ══ -->
-  <title>Advance Fitness | Coaching Digital Personalizado y Nutrición en Medellín</title>
-  <meta name="description"
-    content="Transforma tu cuerpo desde casa con Advance Fitness. Coaching 100% digital, rutinas en video HD, plan nutricional personalizado y seguimiento semanal en Medellín y toda Colombia." />
-  <meta name="keywords"
-    content="entrenador personal online, coaching digital fitness, plan nutricional personalizado, rutinas en casa, Advance Fitness Medellín, gimnasio virtual" />
-  <meta name="author" content="Advance Fitness" />
-  <link rel="canonical" href="https://www.tudominio.com/" />
-  <meta name="robots" content="index, follow" />
-
-
-  <!-- ══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ══ -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.tudominio.com/" />
-  <meta property="og:title" content="Advance Fitness | Coaching Digital Personalizado" />
-  <meta property="og:description"
-    content="Entrena sin excusas. Coaching 100% digital con entrenador personal certificado, plan de alimentación y seguimiento en Colombia." />
-  <meta property="og:image" content="https://www.tudominio.com/ruta-a-tu-imagen-og.jpg" />
-  <meta property="og:site_name" content="Advance Fitness" />
-  <meta property="og:locale" content="es_CO" />
-
-  <!-- ══ TWITTER CARDS ══ -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.tudominio.com/" />
-  <meta name="twitter:title" content="Advance Fitness | Coaching Digital Personalizado" />
-  <meta name="twitter:description"
-    content="Entrena sin excusas. Coaching 100% digital con entrenador personal certificado, plan de alimentación y seguimiento." />
-  <meta name="twitter:image" content="https://www.tudominio.com/ruta-a-tu-imagen-og.jpg" />
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HealthClub",
-      "name": "Advance Fitness Medellín",
-      "priceRange": "$350.000 COP",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Medellín",
-        "addressRegion": "Antioquia",
-        "addressCountry": "CO"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "6.2442", 
-        "longitude": "-75.5736"
-      },
-      "offers": {
-        "@type": "Offer",
-        "name": "Plan Advance Élite Presencial",
-        "price": "350000",
-        "priceCurrency": "COP"
-      }
-    }
-  </script>
-  <!-- ══ SCHEMA.ORG JSON-LD ══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "Advance Fitness",
-    "image": "https://advance-fitness.ynt.codes/img/img2.JPG",
-    "@id": "https://advance-fitness.ynt.codes/",
-    "url": "https://advance-fitness.ynt.codes/",
-    "telephone": "+573126703080",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Medellín",
-      "addressRegion": "Antioquia",
-      "addressCountry": "CO"
-    },
-    "description": "Coaching 100% digital con entrenador personal certificado. Rutinas en video, plan nutricional a tu medida y seguimiento semanal.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "500"
-    },
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Plan Nutrición",
-        "price": "120000",
-        "priceCurrency": "COP",
-        "availability": "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        "name": "Plan Élite Completo",
-        "price": "350000",
-        "priceCurrency": "COP",
-        "availability": "https://schema.org/InStock"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Fonts: Bebas Neue (display) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <script>
@@ -142,10 +30,6 @@
           boxShadow: {
             card: '0 4px 32px 0 rgba(0,0,0,0.45)',
             crimson: '0 8px 32px 0 rgba(196,30,58,0.35)',
-            glow: '0 0 60px 16px rgba(196,30,58,0.18)',
-          },
-          letterSpacing: {
-            widest2: '.2em',
           },
         },
       },
@@ -153,7 +37,6 @@
   </script>
 
   <style>
-    /* ══ DESIGN TOKENS — Advance Fitness ══ */
     :root {
       --ink: #0A0A0A;
       --ink-800: #1C1C1C;
@@ -163,126 +46,106 @@
       --crimson-d: #9B1730;
       --crimson-f: #1A0508;
       --silver: #9CA3AF;
-      --silver-l: #D1D5DB;
       --white: #FFFFFF;
     }
 
-    /* ══ GLOBAL ══ */
     *,
     *::before,
     *::after {
       box-sizing: border-box;
       margin: 0;
-      padding: 0;
+      padding: 0
     }
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: smooth
     }
 
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--ink);
       color: var(--white);
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased
     }
 
-    /* ══ TYPOGRAPHY ══ */
     .font-display {
-      font-family: 'Bebas Neue', Impact, sans-serif;
+      font-family: 'Bebas Neue', Impact, sans-serif
     }
 
-    /* ══ GRADIENTS ══ */
     .gradient-hero {
-      background: linear-gradient(160deg, #0A0A0A 0%, #1C1C1C 45%, #1A0508 100%);
+      background: linear-gradient(160deg, #0A0A0A 0%, #1C1C1C 45%, #1A0508 100%)
     }
 
     .gradient-crimson {
-      background: linear-gradient(135deg, #C41E3A 0%, #E02347 100%);
+      background: linear-gradient(135deg, #C41E3A 0%, #E02347 100%)
     }
 
     .gradient-card {
-      background: linear-gradient(160deg, #1C1C1C 0%, #141414 100%);
+      background: linear-gradient(160deg, #1C1C1C 0%, #141414 100%)
     }
 
-    .gradient-elite {
-      background: linear-gradient(135deg, #1C1C1C 0%, #2E2E2E 100%);
-    }
-
-    /* ══ DIVIDER ══ */
     .divider-crimson {
       width: 40px;
       height: 3px;
       background: var(--crimson);
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 1.5rem
     }
 
-    .divider-left-crimson {
-      width: 32px;
-      height: 3px;
-      background: var(--crimson);
-      margin-bottom: 1rem;
-    }
-
-    /* ══ SCROLLBAR ══ */
-    .no-scroll::-webkit-scrollbar {
-      display: none;
-    }
-
+    /* ── Scrollbar ── */
     ::-webkit-scrollbar {
-      width: 4px;
+      width: 4px
     }
 
     ::-webkit-scrollbar-track {
-      background: var(--ink);
+      background: var(--ink)
     }
 
     ::-webkit-scrollbar-thumb {
       background: var(--crimson-d);
-      border-radius: 4px;
+      border-radius: 4px
     }
 
-    /* ══ STICKY CTA ══ */
+    /* ── Sticky CTA ── */
     #sticky-cta {
       transform: translateY(100%);
-      transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+      transition: transform .35s cubic-bezier(.4, 0, .2, 1)
     }
 
     #sticky-cta.visible {
-      transform: translateY(0);
+      transform: translateY(0)
     }
 
-    /* ══ ANIMATIONS ══ */
+    /* ── Animations ── */
     @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(22px);
+        transform: translateY(22px)
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0)
       }
     }
 
     .fade-up {
-      animation: fadeUp .55s ease both;
+      animation: fadeUp .55s ease both
     }
 
     .delay-1 {
-      animation-delay: .1s;
+      animation-delay: .1s
     }
 
     .delay-2 {
-      animation-delay: .22s;
+      animation-delay: .22s
     }
 
     .delay-3 {
-      animation-delay: .36s;
+      animation-delay: .36s
     }
 
     .delay-4 {
-      animation-delay: .50s;
+      animation-delay: .5s
     }
 
     @keyframes pulse-dot {
@@ -290,45 +153,44 @@
       0%,
       100% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1)
       }
 
       50% {
         opacity: .5;
-        transform: scale(.7);
+        transform: scale(.7)
       }
     }
 
     .live-dot {
-      animation: pulse-dot 1.6s ease infinite;
+      animation: pulse-dot 1.6s ease infinite
     }
 
-    /* ══ FIRMA VISUAL: PLAN SELECTOR ══ */
+    /* ── Plan cards ── */
     .plan-card {
       border: 2px solid var(--ink-600);
       border-radius: 1.25rem;
-      padding: 2rem;
+      padding: 1.75rem;
       cursor: pointer;
-      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
-      position: relative;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+      position: relative
     }
 
     .plan-card:hover {
-      border-color: rgba(196, 30, 58, 0.5);
-      transform: translateY(-3px);
+      border-color: rgba(196, 30, 58, .5);
+      transform: translateY(-3px)
     }
 
     .plan-card.active {
       border-color: var(--crimson);
-      box-shadow: 0 0 0 1px var(--crimson), 0 8px 40px rgba(196, 30, 58, 0.25);
+      box-shadow: 0 0 0 1px var(--crimson), 0 8px 40px rgba(196, 30, 58, .25)
     }
 
-    .plan-card .badge-rec {
+    .badge-rec {
       position: absolute;
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
-      font-family: 'DM Sans', sans-serif;
       font-size: .65rem;
       font-weight: 700;
       letter-spacing: .1em;
@@ -337,10 +199,10 @@
       color: #fff;
       padding: 4px 16px;
       border-radius: 999px;
-      white-space: nowrap;
+      white-space: nowrap
     }
 
-    .plan-card .check {
+    .check {
       width: 22px;
       height: 22px;
       border-radius: 50%;
@@ -349,39 +211,20 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: background .2s, border-color .2s;
+      transition: background .2s, border-color .2s
     }
 
-    .plan-card.active .check {
-      background: var(--crimson);
-      border-color: var(--crimson);
-    }
-
-    /* ══ CTA BUTTON ══ */
-    #cta-btn {
-      transition: background .35s ease, box-shadow .35s ease, transform .1s ease;
-    }
-
-    #cta-btn:hover {
-      opacity: .92;
-      transform: scale(1.01);
-    }
-
-    #cta-btn:active {
-      transform: scale(.98);
-    }
-
-    /* ══ FEATURE ROW ══ */
+    /* ── Feature rows ── */
     .feature-row {
       display: flex;
       align-items: flex-start;
       gap: .875rem;
       padding: .75rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, .06)
     }
 
     .feature-row:last-child {
-      border-bottom: none;
+      border-bottom: none
     }
 
     .feature-icon {
@@ -389,854 +232,1147 @@
       height: 36px;
       border-radius: .625rem;
       background: var(--crimson-f);
-      border: 1px solid rgba(196, 30, 58, 0.2);
+      border: 1px solid rgba(196, 30, 58, .2);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
+      flex-shrink: 0
     }
 
-    /* ══ INCLUDE / EXCLUDE row ══ */
     .inc {
-      color: #4ADE80;
+      color: #4ADE80
     }
 
     .exc {
-      color: #4B5563;
+      color: #4B5563
     }
 
-    /* ══ REVIEW CARD ══ */
+    /* ── Reviews ── */
     .review-card {
       background: var(--ink-800);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, .07);
       border-radius: 1rem;
       padding: 1.5rem;
-      transition: border-color .25s, transform .25s;
+      transition: border-color .25s, transform .25s
     }
 
     .review-card:hover {
-      border-color: rgba(196, 30, 58, 0.3);
-      transform: translateY(-4px);
+      border-color: rgba(196, 30, 58, .3);
+      transform: translateY(-4px)
     }
 
-    /* ══ FAQ ══ */
+    /* ── FAQ ── */
     details summary {
       list-style: none;
-      cursor: pointer;
+      cursor: pointer
     }
 
     details summary::-webkit-details-marker {
-      display: none;
+      display: none
     }
 
     details[open] summary .chevron {
-      transform: rotate(180deg);
+      transform: rotate(180deg)
     }
 
     .chevron {
-      transition: transform .25s ease;
+      transition: transform .25s
     }
 
-    /* ══ STAT ══ */
+    /* ── Stat ── */
     .stat-num {
       font-family: 'Bebas Neue', Impact, sans-serif;
       font-size: 3.5rem;
       line-height: 1;
-      color: var(--crimson);
+      color: var(--crimson)
     }
 
-    /* ══ STOCK BAR ══ */
     .stock-bar {
       height: 6px;
       border-radius: 999px;
       background: linear-gradient(90deg, var(--crimson-d) 0%, var(--crimson) 100%);
       width: 71%;
-      transition: width 1.2s ease;
+      transition: width 1.2s
     }
 
-    /* ══ ADVANCE LOGO MARK ══ */
     .logo-a {
       font-family: 'Bebas Neue', Impact, sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       letter-spacing: .05em;
-      color: var(--white);
+      color: var(--white)
     }
 
     .logo-a span {
-      color: var(--crimson);
+      color: var(--crimson)
+    }
+
+    /* ══ POPUP / MODAL ══ */
+    #popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, .85);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem
+    }
+
+    #popup-overlay.open {
+      display: flex
+    }
+
+    #popup-box {
+      background: #1C1C1C;
+      border: 1px solid rgba(196, 30, 58, .35);
+      border-radius: 1.25rem;
+      width: 100%;
+      max-width: 480px;
+      max-height: 92vh;
+      overflow-y: auto;
+      box-shadow: 0 0 0 1px rgba(196, 30, 58, .15), 0 24px 64px rgba(0, 0, 0, .7);
+      animation: fadeUp .35s ease both
+    }
+
+    /* Input styles */
+    .form-field {
+      width: 100%;
+      background: #0A0A0A;
+      border: 1.5px solid rgba(255, 255, 255, .12);
+      color: #fff;
+      border-radius: .625rem;
+      padding: .7rem 1rem;
+      font-size: .875rem;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s
+    }
+
+    .form-field:focus {
+      border-color: var(--crimson);
+      box-shadow: 0 0 0 3px rgba(196, 30, 58, .15)
+    }
+
+    .form-field.error {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, .15)
+    }
+
+    .form-field.ok {
+      border-color: #4ADE80;
+      box-shadow: 0 0 0 3px rgba(74, 222, 128, .1)
+    }
+
+    .field-msg {
+      font-size: .72rem;
+      margin-top: .3rem;
+      min-height: .9rem
+    }
+
+    .field-msg.err {
+      color: #ef4444
+    }
+
+    .field-msg.good {
+      color: #4ADE80
+    }
+
+    /* Select styling */
+    select.form-field option {
+      background: #1C1C1C;
+      color: #fff
+    }
+
+    /* Success state */
+    #popup-success {
+      display: none
+    }
+
+    #popup-success.show {
+      display: block
+    }
+
+    #popup-form-wrap {
+      display: block
+    }
+
+    #popup-form-wrap.hide {
+      display: none
     }
   </style>
 </head>
 
 <body x-data="{
-  plan: 'elite',
-  get planName()  { return this.plan === 'elite' ? 'Plan Élite Completo' : 'Plan Nutrición' },
-  get planPrice() { return this.plan === 'elite' ? '$350.000' : '$120.000' },
-  get planCode()  { return this.plan === 'elite' ? 'ADVANCEON' : 'RETOPRESENCIAL' },
-  get waMsg()     {
-    return this.plan === 'elite'
-      ? encodeURIComponent('Hola, quiero el Plan Élite Completo (Entrenamiento + Nutrición) con código ADVANCEON')
-      : encodeURIComponent('Hola, quiero el Plan Nutrición con código RETOPRESENCIAL')
+  plan: 'virtual',
+  popup: false,
+  submitted: false,
+  form: {
+    nombre: '', nombreErr: '', nombreOk: false,
+    celular: '', celularErr: '', celularOk: false,
+    email: '', emailErr: '', emailOk: false,
+    ciudad: '', ciudadErr: '', ciudadOk: false,
+  },
+
+  get planName() {
+    if (this.plan==='nutricion') return 'Plan Nutrición';
+    if (this.plan==='virtual')   return 'Plan Virtual Completo';
+    return 'Plan Élite Presencial';
+  },
+  get planPrice() {
+    if (this.plan==='nutricion') return '\$120.000';
+    if (this.plan==='virtual')   return '\$200.000';
+    return '\$350.000';
+  },
+  get planCode() {
+    if (this.plan==='nutricion') return 'RETOPRESENCIAL';
+    if (this.plan==='virtual')   return 'ADVANCEON';
+    return 'GLOBALFIT';
+  },
+  get planDesc() {
+    if (this.plan==='nutricion') return 'Plan nutricional personalizado';
+    if (this.plan==='virtual')   return 'Entrenamiento + Nutrición + Videos + Asesoría digital';
+    return 'Acompañamiento presencial 5 días/semana en Medellín';
+  },
+
+  openPopup() { this.popup = true; document.body.style.overflow='hidden' },
+  closePopup() {
+    this.popup = false;
+    document.body.style.overflow='';
+    this.submitted = false;
+    this.form = {
+      nombre:'',nombreErr:'',nombreOk:false,
+      celular:'',celularErr:'',celularOk:false,
+      email:'',emailErr:'',emailOk:false,
+      ciudad:'',ciudadErr:'',ciudadOk:false
+    }
+  },
+
+  validateNombre() {
+    const v = this.form.nombre.trim();
+    if (!v) { this.form.nombreErr='El nombre completo es requerido'; this.form.nombreOk=false; return false }
+    if (v.split(' ').filter(w=>w).length < 2) { this.form.nombreErr='Ingresa nombre y apellido'; this.form.nombreOk=false; return false }
+    if (v.length < 4) { this.form.nombreErr='Nombre demasiado corto'; this.form.nombreOk=false; return false }
+    this.form.nombreErr=''; this.form.nombreOk=true; return true
+  },
+  validateCelular() {
+    const v = this.form.celular.replace(/\s/g,'');
+    if (!v) { this.form.celularErr='El número de celular es requerido'; this.form.celularOk=false; return false }
+    if (!/^(3\d{9}|57\d{10})$/.test(v)) { this.form.celularErr='Número colombiano inválido (ej: 3001234567)'; this.form.celularOk=false; return false }
+    this.form.celularErr=''; this.form.celularOk=true; return true
+  },
+  validateEmail() {
+    const v = this.form.email.trim();
+    if (!v) { this.form.emailErr='El correo electrónico es requerido'; this.form.emailOk=false; return false }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) { this.form.emailErr='Correo electrónico no válido'; this.form.emailOk=false; return false }
+    this.form.emailErr=''; this.form.emailOk=true; return true
+  },
+  validateCiudad() {
+    if (!this.form.ciudad) { this.form.ciudadErr='Selecciona tu ciudad'; this.form.ciudadOk=false; return false }
+    this.form.ciudadErr=''; this.form.ciudadOk=true; return true
+  },
+  submitForm() {
+    const ok = this.validateNombre() & this.validateCelular() & this.validateEmail() & this.validateCiudad();
+    if (!ok) return;
+    
+    // --- LÓGICA AGREGADA PARA WHATSAPP ---
+    const numeroWhatsApp = '573000000000'; // REEMPLAZA ESTO CON TU NÚMERO REAL
+    
+    // Construimos el texto concatenando cadenas y \n para evitar problemas en el atributo HTML
+    const textoMensaje = '¡Hola! Quiero reservar mi cupo en Advance Fitness.\n\n' +
+                         '*Plan Seleccionado:* ' + this.planName + '\n' +
+                         '*Nombre:* ' + this.form.nombre + '\n' +
+                         '*Celular:* ' + this.form.celular + '\n' +
+                         '*Email:* ' + this.form.email + '\n' +
+                         '*Ciudad:* ' + this.form.ciudad;
+                         
+    const url = 'https://wa.me/' + numeroWhatsApp + '?text=' + encodeURIComponent(textoMensaje);
+    window.open(url, '_blank');
+    // ---------------------------------------
+
+    this.submitted = true;
   }
 }">
 
-  <!-- ══════════════════════════════════════════════
-     [S0] ANNOUNCEMENT BAR
-══════════════════════════════════════════════ -->
-  <header>
-    <div
-      class="gradient-crimson text-white text-xs sm:text-sm font-semibold text-center py-2.5 tracking-widest uppercase">
-      🇨🇴 Coaching 100% Digital &nbsp;·&nbsp; Resultados Reales &nbsp;·&nbsp; Pago Contra Entrega
-    </div>
+  <div id="popup-overlay" :class="popup ? 'open' : ''" @keydown.escape.window="closePopup()">
+    <div id="popup-box" @click.stop>
 
-    <!-- ══════════════════════════════════════════════
-       [S1] NAV
-  ══════════════════════════════════════════════ -->
-    <nav aria-label="Navegación principal" class="bg-ink border-b border-white/8 sticky top-0 z-40">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
-        <div class="flex items-center gap-2">
-          <svg aria-hidden="true" width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <polygon points="16,2 30,30 2,30" fill="none" stroke="#C41E3A" stroke-width="2.5" stroke-linejoin="round" />
-            <line x1="8" y1="22" x2="24" y2="22" stroke="#C41E3A" stroke-width="2" stroke-linecap="round" />
-            <circle cx="16" cy="10" r="2" fill="#C41E3A" />
-            <line x1="16" y1="12" x2="16" y2="19" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-            <line x1="16" y1="14" x2="13" y2="17" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-            <line x1="16" y1="14" x2="19" y2="17" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-            <line x1="16" y1="19" x2="13" y2="23" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-            <line x1="16" y1="19" x2="19" y2="23" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
+      <div class="gradient-crimson p-5 rounded-t-2xl flex items-start justify-between">
+        <div>
+          <p class="text-white/70 text-xs font-semibold uppercase tracking-widest mb-0.5">Reservar cupo</p>
+          <h3 class="font-display text-2xl text-white tracking-wide" x-text="planName"></h3>
+          <p class="text-white/75 text-sm mt-0.5" x-text="planPrice + ' / mes'"></p>
+        </div>
+        <button @click="closePopup()" class="text-white/60 hover:text-white transition-colors mt-0.5 p-1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
-          <span class="logo-a">ADVANCE <span>FITNESS</span></span>
-        </div>
-        <a href="#elegir-plan"
-          class="gradient-crimson text-white text-xs font-bold px-5 py-2 rounded-full tracking-widest uppercase hover:opacity-90 transition-opacity">
-          Ver Planes
-        </a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- ══════════════════════════════════════════════
-       [S2] HERO
-  ══════════════════════════════════════════════ -->
-    <section class="gradient-hero pt-12 sm:pt-20 pb-16 sm:pb-24 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-[0.03]"
-        style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');">
+        </button>
       </div>
 
-      <div class="absolute right-0 top-0 opacity-[0.04] select-none pointer-events-none"
-        style="font-family:'Bebas Neue',Impact,sans-serif; font-size:28rem; line-height:1; color:#fff;">A</div>
-
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-        <div class="flex items-center gap-2 mb-6 fade-up">
-          <span class="w-2 h-2 rounded-full bg-crimson live-dot"></span>
-          <span class="text-xs font-semibold tracking-widest uppercase text-silver">Cupos disponibles · Medellín &
-            Colombia</span>
-        </div>
-
-        <h1 class="font-display text-white leading-[.92] mb-6 fade-up delay-1"
-          style="font-size: clamp(3.5rem, 10vw, 8rem);">
-          TRANSFORMA<br>
-          TU CUERPO<br>
-          <span class="text-crimson">DESDE CASA</span>
-        </h1>
-
-        <p class="text-silver text-base sm:text-lg leading-relaxed mb-8 max-w-xl fade-up delay-2">
-          Coaching 100% digital con entrenador personal certificado.
-          Rutinas en video, plan nutricional a tu medida y seguimiento
-          semanal — sin excusas, sin adivinar, sin estancarte.
+      <div id="popup-form-wrap" :class="submitted ? 'hide' : ''" class="p-6 space-y-4">
+        <p class="text-silver/70 text-xs leading-relaxed">
+          Completa tus datos y un coach te contacta en menos de 2 horas para comenzar tu transformación.
         </p>
 
-        <div class="flex flex-wrap gap-8 mb-10 fade-up delay-2">
-          <div>
-            <div class="stat-num">+500</div>
-            <p class="text-silver text-xs uppercase tracking-widest">Clientes</p>
-          </div>
-          <div class="w-px bg-white/10 hidden sm:block"></div>
-          <div>
-            <div class="stat-num">98%</div>
-            <p class="text-silver text-xs uppercase tracking-widest">Satisfacción</p>
-          </div>
-          <div class="w-px bg-white/10 hidden sm:block"></div>
-          <div>
-            <div class="stat-num">4.9★</div>
-            <p class="text-silver text-xs uppercase tracking-widest">Calificación</p>
+        <div>
+          <label class="block text-xs font-semibold text-silver uppercase tracking-widest mb-1.5">Nombre completo
+            *</label>
+          <input x-model="form.nombre" @blur="validateNombre()"
+            @input="if(form.nombreOk || form.nombreErr) validateNombre()" type="text"
+            placeholder="Ej: Juan Carlos Pérez" class="form-field"
+            :class="form.nombreErr ? 'error' : (form.nombreOk ? 'ok' : '')" autocomplete="name" />
+          <div class="field-msg" :class="form.nombreErr ? 'err' : 'good'">
+            <span x-show="form.nombreErr" x-text="form.nombreErr"></span>
+            <span x-show="form.nombreOk && !form.nombreErr">✓ Nombre válido</span>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3 fade-up delay-3">
-          <a href="#elegir-plan"
-            class="gradient-crimson text-white font-bold text-sm py-4 px-8 rounded-xl text-center tracking-widest uppercase hover:opacity-92 transition-opacity shadow-crimson">
-            Elegir Mi Plan →
-          </a>
-          <a href="https://wa.me/573126703080?text=Hola%2C%20quiero%20saber%20más%20sobre%20el%20coaching%20digital%20de%20Advance%20Fitness"
-            target="_blank" rel="noopener noreferrer" aria-label="Hablar con un Coach por WhatsApp"
-            class="border border-white/20 text-white font-semibold text-sm py-4 px-8 rounded-xl text-center hover:border-crimson hover:text-crimson transition-colors">
-            Hablar con un Coach
-          </a>
-        </div>
-
-        <div class="mt-10 max-w-sm fade-up delay-4">
-          <div class="flex justify-between text-xs text-silver mb-1.5">
-            <span>🔥 Cupos del mes</span>
-            <span class="font-semibold text-crimson">71% ocupados</span>
-          </div>
-          <div class="w-full bg-white/10 rounded-full h-1.5">
-            <div class="stock-bar"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-       [S3] TRUST STRIP
-  ══════════════════════════════════════════════ -->
-    <section aria-label="Beneficios principales" class="bg-ink-800 border-y border-white/8 py-5">
-      <div
-        class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-6 sm:gap-10 text-xs font-semibold text-silver uppercase tracking-widest">
-        <div class="flex items-center gap-2">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-            stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          </svg>
-          Entrenador certificado
-        </div>
-        <div class="flex items-center gap-2">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-            stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" />
-            <line x1="8" y1="21" x2="16" y2="21" />
-            <line x1="12" y1="17" x2="12" y2="21" />
-          </svg>
-          Rutinas en video HD
-        </div>
-        <div class="flex items-center gap-2">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-            stroke-width="2">
-            <path d="M18 8h1a4 4 0 010 8h-1" />
-            <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
-            <line x1="6" y1="1" x2="6" y2="4" />
-            <line x1="10" y1="1" x2="10" y2="4" />
-            <line x1="14" y1="1" x2="14" y2="4" />
-          </svg>
-          Plan nutricional incluido
-        </div>
-        <div class="flex items-center gap-2">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-            stroke-width="2">
-            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-          </svg>
-          Seguimiento semanal
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-       [S4] PROBLEMA / SOLUCIÓN
-  ══════════════════════════════════════════════ -->
-    <section id="metodologia" class="py-16 sm:py-20 bg-ink">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <div class="divider-crimson"></div>
-          <h2 class="font-display text-4xl sm:text-5xl text-white mb-4 tracking-wide">¿RECONOCES ESTE CICLO?</h2>
-          <p class="text-silver max-w-xl mx-auto text-sm leading-relaxed">
-            El 80% de las personas que entrenan solas se estancan en los primeros 3 meses. No es falta de voluntad — es
-            falta de sistema.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-5">
-          <div class="gradient-card border border-white/8 rounded-2xl p-6 sm:p-8">
-            <h3 class="font-display text-2xl text-silver mb-4 tracking-wide">SIN COACHING</h3>
-            <ul class="space-y-3">
-              <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>
-                Rutinas genéricas de YouTube que no respetan tu cuerpo</li>
-              <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span> No
-                sabes si estás comiendo bien o destruyendo tu progreso</li>
-              <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>
-                Lesiones por mala técnica sin nadie que te corrija</li>
-              <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>
-                Mesetas de semanas sin saber qué cambiar</li>
-              <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>
-                Motivación que sube y baja sin rendición de cuentas</li>
-            </ul>
-          </div>
-
-          <div class="border border-crimson/40 rounded-2xl p-6 sm:p-8 relative overflow-hidden"
-            style="background: linear-gradient(135deg, #1A0508 0%, #1C1C1C 100%);">
+        <div>
+          <label class="block text-xs font-semibold text-silver uppercase tracking-widest mb-1.5">Número de celular
+            *</label>
+          <div class="flex gap-2">
             <div
-              class="absolute top-0 right-0 w-32 h-32 rounded-full bg-crimson/8 -translate-y-1/2 translate-x-1/2 blur-2xl pointer-events-none">
+              class="flex items-center gap-1.5 bg-ink border border-white/12 rounded-lg px-3 text-sm text-silver flex-shrink-0">
+              🇨🇴 +57
             </div>
-            <h3 class="font-display text-2xl text-crimson mb-4 tracking-wide">CON ADVANCE DIGITAL</h3>
-            <ul class="space-y-3">
-              <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>
-                Programa 100% personalizado a tu cuerpo y objetivos</li>
-              <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span> Plan
-                nutricional con macros calculados y fácil de seguir</li>
-              <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>
-                Rutinas en video con técnica explicada al detalle</li>
-              <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span> Ajuste
-                semanal según tu progreso real</li>
-              <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>
-                Rendición de cuentas y soporte directo con tu coach</li>
-            </ul>
+            <input x-model="form.celular" @blur="validateCelular()"
+              @input="if(form.celularOk || form.celularErr) validateCelular()" type="tel" placeholder="300 123 4567"
+              class="form-field flex-1" :class="form.celularErr ? 'error' : (form.celularOk ? 'ok' : '')"
+              autocomplete="tel" maxlength="12" />
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-       [S5] QUÉ INCLUYE — FEATURES
-  ══════════════════════════════════════════════ -->
-    <section id="que-incluye" class="py-16 sm:py-20 bg-ink-800">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <div class="divider-crimson"></div>
-          <h2 class="font-display text-4xl sm:text-5xl text-white mb-3 tracking-wide">LO QUE RECIBES</h2>
-          <p class="text-silver text-sm">Todo lo que necesitas para transformarte, en tu celular.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="feature-row border-b border-white/8 py-5">
-            <div class="feature-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="var(--crimson)" stroke-width="2">
-                <polygon points="23 7 16 12 23 17 23 7" />
-                <rect x="1" y="5" width="15" height="14" rx="2" />
-              </svg></div>
-            <div>
-              <p class="font-semibold text-white text-sm">Rutinas en video HD</p>
-              <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Cada ejercicio explicado con la técnica correcta,
-                ángulos múltiples y progresiones. Diseñadas para casa o gym.</p>
-            </div>
-          </div>
-          <div class="feature-row border-b border-white/8 py-5">
-            <div class="feature-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="var(--crimson)" stroke-width="2">
-                <path d="M18 8h1a4 4 0 010 8h-1" />
-                <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
-              </svg></div>
-            <div>
-              <p class="font-semibold text-white text-sm">Plan nutricional personalizado</p>
-              <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Macros calculados según tu cuerpo y objetivos.
-                Listas de compras y recetas prácticas para Colombia.</p>
-            </div>
-          </div>
-          <div class="feature-row border-b border-white/8 py-5">
-            <div class="feature-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="var(--crimson)" stroke-width="2">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="16" y1="13" x2="8" y2="13" />
-                <line x1="16" y1="17" x2="8" y2="17" />
-                <polyline points="10 9 9 9 8 9" />
-              </svg></div>
-            <div>
-              <p class="font-semibold text-white text-sm">Material didáctico PDF</p>
-              <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Guías de entrenamiento, glosario de ejercicios,
-                tabla de sustituciones y hoja de seguimiento mensual.</p>
-            </div>
-          </div>
-          <div class="feature-row border-b border-white/8 py-5">
-            <div class="feature-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="var(--crimson)" stroke-width="2">
-                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-              </svg></div>
-            <div>
-              <p class="font-semibold text-white text-sm">Seguimiento semanal con tu coach</p>
-              <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Check-in por WhatsApp cada semana. Tu programa
-                evoluciona con tu progreso — no es un PDF genérico estático.</p>
-            </div>
-          </div>
-          <div class="feature-row py-5">
-            <div class="feature-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="var(--crimson)" stroke-width="2">
-                <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 00-3-3.87" />
-                <path d="M16 3.13a4 4 0 010 7.75" />
-              </svg></div>
-            <div>
-              <p class="font-semibold text-white text-sm">Valoración física inicial</p>
-              <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Cuestionario detallado de objetivos, historial y
-                disponibilidad. Tu programa parte desde cero contigo.</p>
-            </div>
-          </div>
-          <div class="feature-row py-5">
-            <div class="feature-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="var(--crimson)" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg></div>
-            <div>
-              <p class="font-semibold text-white text-sm">Acceso por 1 mes completo</p>
-              <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Material disponible todo el mes. Renueva si
-                quieres continuar — sin contratos, sin anualidades ocultas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-       [S6] FIRMA VISUAL: COMPARADOR DE PLANES
-  ══════════════════════════════════════════════ -->
-    <section class="py-16 sm:py-24 bg-ink" id="elegir-plan">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <div class="divider-crimson"></div>
-          <h2 class="font-display text-4xl sm:text-5xl text-white mb-3 tracking-wide">ELIGE TU PLAN</h2>
-          <p class="text-silver text-sm">Selecciona el que se adapta a donde estás hoy. Puedes escalar cuando quieras.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-5 mb-8">
-          <!-- PLAN A -->
-          <div class="plan-card gradient-card" :class="plan === 'nutricion' ? 'active' : ''"
-            @click="plan = 'nutricion'">
-            <div class="flex items-start justify-between mb-5">
-              <div>
-                <p class="text-xs font-bold tracking-widest uppercase text-silver mb-1">Plan</p>
-                <h3 class="font-display text-3xl text-white tracking-wide">NUTRICIÓN</h3>
-              </div>
-              <div class="check" :class="plan === 'nutricion' ? 'bg-crimson border-crimson' : ''">
-                <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white"
-                  stroke-width="3">
-                  <path d="M20 6L9 17l-5-5" />
-                </svg>
-              </div>
-            </div>
-            <div class="mb-5">
-              <span class="font-display text-5xl text-white">$120.000</span>
-              <span class="text-silver text-sm ml-2">/ mes</span>
-            </div>
-            <ul class="space-y-2.5 mb-6">
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Plan nutricional
-                  personalizado</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Macros y calorías
-                  calculadas</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Lista de compras +
-                  recetas</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Material PDF
-                  educativo</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Seguimiento
-                  nutricional semanal</span></li>
-              <li class="flex gap-2 text-sm"><span class="exc">✕</span><span class="text-white/30">Rutinas de
-                  entrenamiento</span></li>
-              <li class="flex gap-2 text-sm"><span class="exc">✕</span><span class="text-white/30">Videos de ejercicios
-                  HD</span></li>
-            </ul>
-            <p class="text-xs text-silver/50 italic">Ideal para quienes ya tienen rutina de gym y quieren optimizar la
-              alimentación.</p>
-          </div>
-
-          <!-- PLAN B -->
-          <div class="plan-card relative" :class="plan === 'elite' ? 'active' : ''" @click="plan = 'elite'"
-            style="background: linear-gradient(160deg, #1A0508 0%, #1C1C1C 100%);">
-            <div class="badge-rec">⭐ Más popular</div>
-            <div class="flex items-start justify-between mb-5">
-              <div>
-                <p class="text-xs font-bold tracking-widest uppercase text-crimson mb-1">Plan</p>
-                <h3 class="font-display text-3xl text-white tracking-wide">ÉLITE</h3>
-                <p class="text-xs text-silver/60 mt-0.5">Entrenamiento + Nutrición</p>
-              </div>
-              <div class="check" :class="plan === 'elite' ? 'bg-crimson border-crimson' : ''">
-                <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white"
-                  stroke-width="3">
-                  <path d="M20 6L9 17l-5-5" />
-                </svg>
-              </div>
-            </div>
-            <div class="mb-1">
-              <span class="font-display text-5xl text-white">$350.000</span>
-              <span class="text-silver text-sm ml-2">/ mes</span>
-            </div>
-            <p class="text-xs text-crimson mb-5">Ahorras $50.000 vs contratar por separado</p>
-            <ul class="space-y-2.5 mb-6">
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Todo lo del Plan
-                  Nutrición</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80"><strong
-                    class="text-white">Rutinas de entrenamiento</strong> personalizadas</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80"><strong
-                    class="text-white">Videos HD</strong> de cada ejercicio con técnica</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Programa ajustado
-                  semana a semana</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Seguimiento de fuerza
-                  y composición</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Soporte prioritario
-                  con tu coach</span></li>
-              <li class="flex gap-2 text-sm"><span class="inc">✓</span><span class="text-white/80">Valoración física
-                  inicial completa</span></li>
-            </ul>
-            <p class="text-xs text-silver/50 italic">Para quienes quieren el sistema completo y resultados rápidos sin
-              adivinanzas.</p>
+          <div class="field-msg" :class="form.celularErr ? 'err' : 'good'">
+            <span x-show="form.celularErr" x-text="form.celularErr"></span>
+            <span x-show="form.celularOk && !form.celularErr">✓ Número válido</span>
           </div>
         </div>
 
-        <div class="bg-ink-800 border border-white/8 rounded-2xl p-6">
-          <div class="flex items-center justify-between mb-4 pb-4 border-b border-white/8">
-            <div>
-              <p class="text-xs text-silver uppercase tracking-widest mb-1">Plan seleccionado</p>
-              <p class="font-display text-xl text-white tracking-wide" x-text="planName"></p>
-            </div>
-            <div class="text-right">
-              <p class="font-display text-3xl text-white" x-text="planPrice"></p>
-              <p class="text-xs text-silver/50">por mes</p>
-            </div>
+        <div>
+          <label class="block text-xs font-semibold text-silver uppercase tracking-widest mb-1.5">Correo electrónico
+            *</label>
+          <input x-model="form.email" @blur="validateEmail()" @input="if(form.emailOk || form.emailErr) validateEmail()"
+            type="email" placeholder="correo@ejemplo.com" class="form-field"
+            :class="form.emailErr ? 'error' : (form.emailOk ? 'ok' : '')" autocomplete="email" />
+          <div class="field-msg" :class="form.emailErr ? 'err' : 'good'">
+            <span x-show="form.emailErr" x-text="form.emailErr"></span>
+            <span x-show="form.emailOk && !form.emailErr">✓ Correo válido</span>
           </div>
-          <div class="flex items-center gap-3 border border-crimson/30 bg-crimson/8 rounded-xl px-4 py-3 mb-5">
-            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-              stroke-width="2">
-              <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
-              <line x1="7" y1="7" x2="7.01" y2="7" />
-            </svg>
-            <span class="font-display text-crimson tracking-widest text-sm" x-text="planCode"></span>
-            <span class="text-silver/40 text-xs ml-auto">15% descuento inicial</span>
-          </div>
-          <a id="cta-btn" :href="'https://wa.me/573126703080?text=' + waMsg" target="_blank" rel="noopener noreferrer"
-            aria-label="Contratar plan por WhatsApp"
-            class="block w-full gradient-crimson text-white font-bold text-base py-4 rounded-xl text-center tracking-widest uppercase shadow-crimson hover:opacity-92 transition-opacity mb-3">
-            🏋️ QUIERO ESTE PLAN — ESCRIBIR POR WHATSAPP
-          </a>
-          <p class="text-center text-silver/35 text-xs">
-            Sin pago anticipado obligatorio · Respuesta en menos de 2 horas · Medellín y toda Colombia
-          </p>
         </div>
 
-        <div class="mt-5 text-center">
-          <p class="text-silver/40 text-xs">
-            ⚡ Una vez recibas el mensaje, tu coach te contacta para la valoración inicial y te envía el programa a tu
-            WhatsApp — sin apps adicionales.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-       [S7] TABLA COMPARATIVA VISUAL
-  ══════════════════════════════════════════════ -->
-    <section class="py-14 sm:py-18 bg-ink-800">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10">
-          <div class="divider-crimson"></div>
-          <h2 class="font-display text-3xl sm:text-4xl text-white tracking-wide">COMPARACIÓN DE PLANES</h2>
-        </div>
-
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b border-white/10">
-                <th scope="col" class="text-left py-3 pr-4 text-silver font-semibold w-1/2">Incluye</th>
-                <th scope="col" class="text-center py-3 px-4 text-silver font-semibold">Nutrición<br><span
-                    class="text-white font-bold">$120.000</span></th>
-                <th scope="col" class="text-center py-3 px-4 text-crimson font-bold">Élite<br><span
-                    class="text-white font-bold">$350.000</span></th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/6">
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Plan nutricional personalizado</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Macros y calorías calculadas</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Lista de compras + recetas</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Material PDF educativo</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Seguimiento nutricional semanal</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Rutinas de entrenamiento</td>
-                <td class="py-3 px-4 text-center exc text-base">✕</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Videos HD con técnica</td>
-                <td class="py-3 px-4 text-center exc text-base">✕</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Ajuste semanal del programa</td>
-                <td class="py-3 px-4 text-center exc text-base">✕</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Seguimiento de fuerza/composición</td>
-                <td class="py-3 px-4 text-center exc text-base">✕</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 text-white/70">Soporte prioritario coach</td>
-                <td class="py-3 px-4 text-center exc text-base">✕</td>
-                <td class="py-3 px-4 text-center inc text-base">✓</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-       [S8] TESTIMONIOS
-  ══════════════════════════════════════════════ -->
-    <section id="testimonios" class="py-16 sm:py-20 bg-ink">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <div class="divider-crimson"></div>
-          <h2 class="font-display text-4xl sm:text-5xl text-white tracking-wide mb-3">RESULTADOS REALES</h2>
-          <p class="text-silver text-sm">Sin filtros. Sin excusas. Solo trabajo.</p>
-        </div>
-        <div class="grid sm:grid-cols-3 gap-5">
-          <div class="review-card">
-            <div class="flex text-crimson text-sm mb-3">★★★★★</div>
-            <p class="text-white/65 text-sm leading-relaxed mb-4">"En 6 semanas bajé 5 kg de grasa y subí masa. Los
-              videos son clarísimos y el plan de comida es fácil de seguir. Nunca había tenido un coach tan pendiente."
-            </p>
-            <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 rounded-full gradient-crimson flex items-center justify-center text-white text-xs font-bold">
-                DA</div>
-              <div>
-                <p class="font-semibold text-white text-xs">Diego A.</p>
-                <p class="text-silver/40 text-xs">Medellín · Plan Élite</p>
-              </div>
-            </div>
-          </div>
-          <div class="review-card">
-            <div class="flex text-crimson text-sm mb-3">★★★★★</div>
-            <p class="text-white/65 text-sm leading-relaxed mb-4">"Empecé solo con el plan nutricional y en 2 meses
-              cambié completamente. Ahora estoy en el Élite. La diferencia de tener un experto calculando todo es
-              brutal."</p>
-            <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 rounded-full bg-zinc-700 flex items-center justify-center text-white text-xs font-bold">
-                KM</div>
-              <div>
-                <p class="font-semibold text-white text-xs">Karen M.</p>
-                <p class="text-silver/40 text-xs">Bogotá · Plan Nutrición → Élite</p>
-              </div>
-            </div>
-          </div>
-          <div class="review-card">
-            <div class="flex text-crimson text-sm mb-3">★★★★★</div>
-            <p class="text-white/65 text-sm leading-relaxed mb-4">"Lo hago desde Barranquilla, todo por WhatsApp y el
-              material digital. El coach ajusta el programa cada semana según mis fotos de progreso. Increíble."</p>
-            <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 rounded-full bg-zinc-600 flex items-center justify-center text-white text-xs font-bold">
-                JS</div>
-              <div>
-                <p class="font-semibold text-white text-xs">Julián S.</p>
-                <p class="text-silver/40 text-xs">Barranquilla · Plan Élite</p>
-              </div>
-            </div>
+        <div>
+          <label class="block text-xs font-semibold text-silver uppercase tracking-widest mb-1.5">Ciudad *</label>
+          <select x-model="form.ciudad" @change="validateCiudad()" class="form-field"
+            :class="form.ciudadErr ? 'error' : (form.ciudadOk ? 'ok' : '')">
+            <option value="" disabled selected>Selecciona tu ciudad</option>
+            <optgroup label="Antioquia">
+              <option>Medellín</option>
+              <option>Bello</option>
+              <option>Itagüí</option>
+              <option>Envigado</option>
+              <option>Sabaneta</option>
+              <option>La Estrella</option>
+              <option>Caldas (Ant)</option>
+            </optgroup>
+            <optgroup label="Otras ciudades">
+              <option>Bogotá</option>
+              <option>Cali</option>
+              <option>Barranquilla</option>
+              <option>Cartagena</option>
+              <option>Bucaramanga</option>
+              <option>Pereira</option>
+              <option>Manizales</option>
+              <option>Santa Marta</option>
+              <option>Cúcuta</option>
+              <option>Villavicencio</option>
+              <option>Otra ciudad</option>
+            </optgroup>
+          </select>
+          <div class="field-msg" :class="form.ciudadErr ? 'err' : 'good'">
+            <span x-show="form.ciudadErr" x-text="form.ciudadErr"></span>
+            <span x-show="form.ciudadOk && !form.ciudadErr">✓ Ciudad seleccionada</span>
           </div>
         </div>
-        <div class="mt-8 text-center">
-          <div class="inline-flex items-center gap-3 bg-ink-800 border border-white/10 rounded-full px-6 py-2.5">
-            <div class="flex text-crimson">★★★★★</div>
-            <span class="text-white text-sm"><strong>4.9 / 5</strong> · <strong>+500 clientes</strong>
-              transformados</span>
+
+        <div class="bg-ink border border-crimson/25 rounded-xl px-4 py-3 flex items-center justify-between">
+          <div>
+            <p class="text-xs text-silver/50 uppercase tracking-widest">Plan elegido</p>
+            <p class="text-white text-sm font-semibold" x-text="planName"></p>
+          </div>
+          <div class="text-right">
+            <p class="font-display text-xl text-crimson" x-text="planPrice"></p>
+            <p class="text-silver/40 text-xs">/ mes</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ══════════════════════════════════════════════
-       [S9] CTA FINAL
-  ══════════════════════════════════════════════ -->
-    <section class="py-16 sm:py-20 bg-ink-800">
-      <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-        <div class="divider-crimson"></div>
-        <h2 class="font-display text-4xl sm:text-5xl text-white tracking-wide mb-3">
-          EL MOMENTO<br><span class="text-crimson">ES AHORA</span>
-        </h2>
-        <p class="text-silver text-base mb-8 max-w-md mx-auto">
-          No hay plan perfecto. Hay el que empiezas hoy.
+        <button @click="submitForm()"
+          class="w-full gradient-crimson text-white font-bold text-sm py-3.5 rounded-xl tracking-widest uppercase hover:opacity-92 transition-opacity shadow-crimson mt-2">
+          🏋️ RESERVAR MI CUPO AHORA
+        </button>
+
+        <p class="text-center text-silver/30 text-xs">
+          Al continuar aceptas ser contactado por WhatsApp por un coach de Advance Fitness.
         </p>
-
-        <div class="bg-ink border border-white/10 rounded-2xl p-6 sm:p-8 text-left">
-          <div class="flex items-center justify-between mb-5 pb-5 border-b border-white/8">
-            <div>
-              <p class="font-display text-xl text-white tracking-wide" x-text="planName"></p>
-              <p class="text-silver/50 text-xs mt-0.5">Coaching digital personalizado</p>
-            </div>
-            <div class="text-right">
-              <p class="font-display text-3xl text-white" x-text="planPrice"></p>
-              <p class="text-xs text-silver/40">/ mes · sin contrato</p>
-            </div>
-          </div>
-          <div class="bg-ink-800 rounded-xl p-4 mb-5 space-y-2">
-            <div class="flex items-center gap-3 text-sm text-white/70">
-              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-                stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              Contacto del coach en menos de <strong class="text-white">2 horas</strong>
-            </div>
-            <div class="flex items-center gap-3 text-sm text-white/70">
-              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-                stroke-width="2">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-              </svg>
-              Valoración inicial y programa en <strong class="text-white">24–48 horas</strong>
-            </div>
-            <div class="flex items-center gap-3 text-sm text-white/70">
-              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
-                stroke-width="2">
-                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-              </svg>
-              Todo por <strong class="text-white">WhatsApp</strong> — sin apps extra
-            </div>
-          </div>
-          <a :href="'https://wa.me/573126703080?text=' + waMsg" target="_blank" rel="noopener noreferrer"
-            aria-label="Empezar transformación por WhatsApp"
-            class="block w-full gradient-crimson text-white font-bold text-lg py-4 rounded-xl text-center tracking-widest uppercase shadow-crimson hover:opacity-92 transition-opacity mb-3">
-            🏋️ EMPEZAR MI TRANSFORMACIÓN
-          </a>
-          <p class="text-center text-silver/30 text-xs">
-            Sin contratos · Sin pago anticipado obligatorio · Respuesta garantizada
-          </p>
-        </div>
       </div>
-    </section>
 
-    <!-- ══════════════════════════════════════════════
-       [S10] FAQ
-  ══════════════════════════════════════════════ -->
-    <section id="faq" class="py-14 bg-ink">
-      <div class="max-w-2xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10">
-          <div class="divider-crimson"></div>
-          <h2 class="font-display text-3xl sm:text-4xl text-white tracking-wide">PREGUNTAS FRECUENTES</h2>
+      <div id="popup-success" :class="submitted ? 'show' : ''" class="p-8 text-center">
+        <div class="w-16 h-16 rounded-full gradient-crimson flex items-center justify-center mx-auto mb-4">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
         </div>
-        <div class="space-y-0">
-          <details class="group border-b border-white/8 py-4">
-            <summary
-              class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer focus:outline-none focus:ring focus:ring-crimson/50 rounded">
-              ¿Necesito ir a un gimnasio o puedo entrenar en casa?
-              <svg aria-hidden="true" class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </summary>
-            <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">
-              Ambas opciones. Al inicio de tu proceso, tu coach te pregunta sobre el espacio y el equipo disponible. El
-              programa se diseña según lo que tienes: desde casa con mancuernas hasta gimnasio completo.
-            </div>
-          </details>
-          <details class="group border-b border-white/8 py-4">
-            <summary
-              class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer focus:outline-none focus:ring focus:ring-crimson/50 rounded">
-              ¿Cómo recibo las rutinas y el material?
-              <svg aria-hidden="true" class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </summary>
-            <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">
-              Todo llega a tu WhatsApp: videos de ejercicios por YouTube o Drive privado, PDFs del plan nutricional y
-              material educativo. Sin apps de pago, sin plataformas externas. Solo tu teléfono.
-            </div>
-          </details>
-          <details class="group border-b border-white/8 py-4">
-            <summary
-              class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer focus:outline-none focus:ring focus:ring-crimson/50 rounded">
-              ¿Puedo empezar con Nutrición y pasar al Élite después?
-              <svg aria-hidden="true" class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </summary>
-            <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">
-              Sí, y es una estrategia válida. Muchos clientes empiezan con el Plan Nutrición para establecer hábitos
-              alimenticios y luego escalan al Élite cuando están listos para el entrenamiento estructurado.
-            </div>
-          </details>
-          <details class="group border-b border-white/8 py-4">
-            <summary
-              class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer focus:outline-none focus:ring focus:ring-crimson/50 rounded">
-              ¿Cuánto tiempo tarda el coach en contactarme?
-              <svg aria-hidden="true" class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </summary>
-            <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">
-              Menos de 2 horas en horario de atención (8 AM – 8 PM). Tras el contacto inicial, recibes el cuestionario
-              de valoración. El programa completo llega en 24–48 horas después de recibir tus respuestas.
-            </div>
-          </details>
-          <details class="group py-4">
-            <summary
-              class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer focus:outline-none focus:ring focus:ring-crimson/50 rounded">
-              ¿Hay algún contrato o permanencia mínima?
-              <svg aria-hidden="true" class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </summary>
-            <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">
-              No. El plan es mensual. Si decides no renovar, simplemente no lo haces. Sin contratos, sin cargos
-              automáticos, sin letras pequeñas. Queremos que te quedes porque ves resultados, no porque estás atrapado.
-            </div>
-          </details>
+        <h3 class="font-display text-2xl text-white tracking-wide mb-2">¡LISTO, <span
+            x-text="form.nombre.split(' ')[0]"></span>!</h3>
+        <p class="text-silver/70 text-sm leading-relaxed mb-6">
+          Tu cupo para el <strong class="text-white" x-text="planName"></strong> está reservado.
+          Un coach de Advance Fitness te escribirá al celular
+          <strong class="text-crimson" x-text="'+57 ' + form.celular"></strong>
+          en menos de <strong class="text-white">2 horas</strong>.
+        </p>
+        <div class="bg-ink rounded-xl p-4 text-left mb-6 space-y-2">
+          <p class="text-xs text-silver/50 font-semibold uppercase tracking-widest mb-2">Próximos pasos</p>
+          <div class="flex gap-2 text-sm text-white/70"><span class="text-crimson font-bold">1.</span> Revisaremos tu
+            cupo y objetivos</div>
+          <div class="flex gap-2 text-sm text-white/70"><span class="text-crimson font-bold">2.</span> Recibirás el
+            cuestionario de valoración</div>
+          <div class="flex gap-2 text-sm text-white/70"><span class="text-crimson font-bold">3.</span> Tu programa
+            personalizado en 24–48 h</div>
         </div>
+        <button @click="closePopup()"
+          class="w-full border border-white/20 text-white text-sm font-semibold py-3 rounded-xl hover:border-crimson transition-colors">
+          Cerrar
+        </button>
       </div>
-    </section>
-  </main>
 
-  <!-- ══════════════════════════════════════════════
-     [S11] FOOTER
-══════════════════════════════════════════════ -->
-  <footer class="bg-ink-800 border-t border-white/8 py-10">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-      <div class="flex items-center justify-center gap-2 mb-3">
-        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 32 32" fill="none">
-          <polygon points="16,2 30,30 2,30" fill="none" stroke="#C41E3A" stroke-width="2.5" stroke-linejoin="round" />
-          <line x1="8" y1="22" x2="24" y2="22" stroke="#C41E3A" stroke-width="2" stroke-linecap="round" />
-          <circle cx="16" cy="10" r="2" fill="#C41E3A" />
-          <line x1="16" y1="12" x2="16" y2="19" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-          <line x1="16" y1="14" x2="13" y2="17" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-          <line x1="16" y1="14" x2="19" y2="17" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-          <line x1="16" y1="19" x2="13" y2="23" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
-          <line x1="16" y1="19" x2="19" y2="23" stroke="#C41E3A" stroke-width="1.8" stroke-linecap="round" />
+    </div>
+  </div>
+
+  <div
+    class="gradient-crimson text-white text-xs sm:text-sm font-semibold text-center py-2.5 tracking-widest uppercase">
+    🇨🇴 Coaching Digital & Presencial · Medellín y toda Colombia · Sin contratos
+  </div>
+
+  <nav class="bg-ink border-b border-white/8 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+
+      <div class="flex items-center gap-2.5">
+        <svg width="34" height="34" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="12" rx="9" ry="10" fill="#C41E3A" />
+          <rect x="46" y="21" width="8" height="7" rx="2" fill="#C41E3A" />
+          <path d="M32 28 C32 28 28 35 28 44 C28 50 32 54 50 55 C68 54 72 50 72 44 C72 35 68 28 68 28 Z"
+            fill="#C41E3A" />
+          <path d="M33 32 C33 32 36 38 50 39 L50 28 C42 27 33 32 33 32Z" fill="#9B1730" />
+          <path d="M67 32 C67 32 64 38 50 39 L50 28 C58 27 67 32 67 32Z" fill="#9B1730" />
+          <path d="M42 55 L42 76 C42 76 45 78 50 78 C55 78 58 76 58 76 L58 55 Z" fill="#C41E3A" />
+          <line x1="50" y1="55" x2="50" y2="78" stroke="#9B1730" stroke-width="1.5" />
+          <line x1="43" y1="62" x2="57" y2="62" stroke="#9B1730" stroke-width="1.2" opacity="0.7" />
+          <line x1="43" y1="69" x2="57" y2="69" stroke="#9B1730" stroke-width="1.2" opacity="0.7" />
+          <path d="M32 28 C32 28 22 24 17 20 C13 17 12 12 16 10 C20 8 24 12 26 16 C28 20 30 24 32 28Z" fill="#C41E3A" />
+          <ellipse cx="18" cy="15" rx="5" ry="7" fill="#E02347" transform="rotate(-20 18 15)" />
+          <circle cx="14" cy="9" r="5" fill="#C41E3A" />
+          <path d="M68 28 C68 28 78 24 83 20 C87 17 88 12 84 10 C80 8 76 12 74 16 C72 20 70 24 68 28Z" fill="#C41E3A" />
+          <ellipse cx="82" cy="15" rx="5" ry="7" fill="#E02347" transform="rotate(20 82 15)" />
+          <circle cx="86" cy="9" r="5" fill="#C41E3A" />
+          <path d="M42 76 C42 76 35 80 32 88 C30 93 32 100 36 102 C40 104 44 98 44 93 L46 76Z" fill="#C41E3A" />
+          <path d="M33 88 C35 84 40 82 44 83 L44 76 C38 76 33 88 33 88Z" fill="#9B1730" />
+          <path d="M58 76 C58 76 65 80 68 88 C70 93 68 100 64 102 C60 104 56 98 56 93 L54 76Z" fill="#C41E3A" />
+          <path d="M67 88 C65 84 60 82 56 83 L56 76 C62 76 67 88 67 88Z" fill="#9B1730" />
+          <ellipse cx="35" cy="103" rx="7" ry="4" fill="#9B1730" />
+          <ellipse cx="65" cy="103" rx="7" ry="4" fill="#9B1730" />
         </svg>
         <span class="logo-a">ADVANCE <span>FITNESS</span></span>
       </div>
-      <p class="text-silver/25 text-xs mt-2 max-w-md mx-auto">
-        Coaching fitness digital · Medellín, Colombia. Los resultados individuales pueden variar según adherencia al
-        programa, genética y factores de estilo de vida.
+
+      <a href="#elegir-plan"
+        class="gradient-crimson text-white text-xs font-bold px-5 py-2 rounded-full tracking-widest uppercase hover:opacity-90 transition-opacity">
+        Ver Planes
+      </a>
+    </div>
+  </nav>
+
+  <section class="gradient-hero pt-12 sm:pt-20 pb-16 sm:pb-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+      style="background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');">
+    </div>
+    <div class="absolute right-0 top-0 opacity-[0.04] select-none pointer-events-none"
+      style="font-family:'Bebas Neue',sans-serif;font-size:28rem;line-height:1;color:#fff;">A</div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="flex items-center gap-2 mb-6 fade-up">
+        <span class="w-2 h-2 rounded-full bg-crimson live-dot"></span>
+        <span class="text-xs font-semibold tracking-widest uppercase text-silver">Cupos disponibles · Medellín &
+          Colombia</span>
+      </div>
+
+      <h1 class="font-display text-white leading-[.92] mb-6 fade-up delay-1" style="font-size:clamp(3.5rem,10vw,8rem);">
+        TRANSFORMA<br>TU CUERPO<br><span class="text-crimson">DESDE CASA</span>
+      </h1>
+
+      <p class="text-silver text-base sm:text-lg leading-relaxed mb-8 max-w-xl fade-up delay-2">
+        Coaching digital con entrenador personal certificado. Rutinas en video, plan nutricional, material de apoyo,
+        asesoría y seguimiento semanal — sin excusas, sin adivinar.
       </p>
+
+      <div class="flex flex-wrap gap-8 mb-10 fade-up delay-2">
+        <div>
+          <div class="stat-num">+500</div>
+          <p class="text-silver text-xs uppercase tracking-widest">Clientes</p>
+        </div>
+        <div class="w-px bg-white/10 hidden sm:block"></div>
+        <div>
+          <div class="stat-num">98%</div>
+          <p class="text-silver text-xs uppercase tracking-widest">Satisfacción</p>
+        </div>
+        <div class="w-px bg-white/10 hidden sm:block"></div>
+        <div>
+          <div class="stat-num">4.9★</div>
+          <p class="text-silver text-xs uppercase tracking-widest">Calificación</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 fade-up delay-3">
+        <a href="#elegir-plan"
+          class="gradient-crimson text-white font-bold text-sm py-4 px-8 rounded-xl text-center tracking-widest uppercase hover:opacity-92 transition-opacity shadow-crimson">
+          Elegir Mi Plan →
+        </a>
+        <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20más%20información%20sobre%20Advance%20Fitness"
+          target="_blank"
+          class="border border-white/20 text-white font-semibold text-sm py-4 px-8 rounded-xl text-center hover:border-crimson hover:text-crimson transition-colors">
+          Hablar con un Coach
+        </a>
+      </div>
+
+      <div class="mt-10 max-w-sm fade-up delay-4">
+        <div class="flex justify-between text-xs text-silver mb-1.5">
+          <span>🔥 Cupos del mes</span>
+          <span class="font-semibold text-crimson">71% ocupados</span>
+        </div>
+        <div class="w-full bg-white/10 rounded-full h-1.5">
+          <div class="stock-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink-800 border-y border-white/8 py-5">
+    <div
+      class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-6 sm:gap-10 text-xs font-semibold text-silver uppercase tracking-widest">
+      <div class="flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        Entrenador certificado
+      </div>
+      <div class="flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" />
+          <line x1="8" y1="21" x2="16" y2="21" />
+          <line x1="12" y1="17" x2="12" y2="21" />
+        </svg>
+        Rutinas en video HD
+      </div>
+      <div class="flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)" stroke-width="2">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+        </svg>
+        Material didáctico PDF
+      </div>
+      <div class="flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)" stroke-width="2">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+        </svg>
+        Asesoría & seguimiento
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-ink">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <div class="divider-crimson"></div>
+        <h2 class="font-display text-4xl sm:text-5xl text-white mb-4 tracking-wide">¿RECONOCES ESTE CICLO?</h2>
+        <p class="text-silver max-w-xl mx-auto text-sm leading-relaxed">El 80% de las personas que entrenan solas se
+          estancan en los primeros 3 meses. No es falta de voluntad — es falta de sistema.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="gradient-card border border-white/8 rounded-2xl p-6 sm:p-8">
+          <h3 class="font-display text-2xl text-silver mb-4 tracking-wide">SIN COACHING</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>Rutinas
+              genéricas de YouTube sin personalización</li>
+            <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>No sabes
+              si tu alimentación destruye tu progreso</li>
+            <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>Lesiones
+              por mala técnica sin nadie que corrija</li>
+            <li class="flex gap-3 text-sm text-white/55"><span class="exc text-lg leading-none mt-0.5">✕</span>Mesetas
+              de semanas sin saber qué ajustar</li>
+            <li class="flex gap-3 text-sm text-white/55"><span
+                class="exc text-lg leading-none mt-0.5">✕</span>Motivación que sube y baja sin rendición de cuentas</li>
+          </ul>
+        </div>
+        <div class="border border-crimson/40 rounded-2xl p-6 sm:p-8 relative overflow-hidden"
+          style="background:linear-gradient(135deg,#1A0508 0%,#1C1C1C 100%);">
+          <div
+            class="absolute top-0 right-0 w-32 h-32 rounded-full bg-crimson/8 -translate-y-1/2 translate-x-1/2 blur-2xl pointer-events-none">
+          </div>
+          <h3 class="font-display text-2xl text-crimson mb-4 tracking-wide">CON ADVANCE FITNESS</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>Programa
+              100% personalizado a tu cuerpo</li>
+            <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>Plan
+              nutricional con macros calculados</li>
+            <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>Videos HD
+              con técnica explicada al detalle</li>
+            <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>Asesoría
+              y preguntas respondidas por tu coach</li>
+            <li class="flex gap-3 text-sm text-white/85"><span class="inc text-lg leading-none mt-0.5">✓</span>Ajuste
+              semanal según tu progreso real</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-ink-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <div class="divider-crimson"></div>
+        <h2 class="font-display text-4xl sm:text-5xl text-white mb-3 tracking-wide">LO QUE RECIBES</h2>
+        <p class="text-silver text-sm">Todo para transformarte — en tu celular o en nuestra sede.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="feature-row py-5">
+          <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
+              stroke-width="2">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" />
+            </svg></div>
+          <div>
+            <p class="font-semibold text-white text-sm">Rutinas en video HD</p>
+            <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Cada ejercicio con técnica correcta, ángulos
+              múltiples y progresiones. Para casa o gym.</p>
+          </div>
+        </div>
+        <div class="feature-row py-5">
+          <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
+              stroke-width="2">
+              <path d="M18 8h1a4 4 0 010 8h-1" />
+              <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
+            </svg></div>
+          <div>
+            <p class="font-semibold text-white text-sm">Plan nutricional personalizado</p>
+            <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Macros calculados según tu cuerpo. Listas de
+              compras y recetas prácticas para Colombia.</p>
+          </div>
+        </div>
+        <div class="feature-row py-5">
+          <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
+              stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+            </svg></div>
+          <div>
+            <p class="font-semibold text-white text-sm">Material didáctico PDF</p>
+            <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Guías de entrenamiento, glosario, tabla de
+              sustituciones y hoja de seguimiento mensual.</p>
+          </div>
+        </div>
+        <div class="feature-row py-5">
+          <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
+              stroke-width="2">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg></div>
+          <div>
+            <p class="font-semibold text-white text-sm">Asesoría y canal de preguntas</p>
+            <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Canal directo con tu coach para dudas sobre
+              técnica, nutrición y ajustes. Respuesta garantizada.</p>
+          </div>
+        </div>
+        <div class="feature-row py-5">
+          <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
+              stroke-width="2">
+              <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 00-3-3.87" />
+            </svg></div>
+          <div>
+            <p class="font-semibold text-white text-sm">Valoración física inicial</p>
+            <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Cuestionario detallado de objetivos, historial y
+              disponibilidad. Tu programa parte desde ti.</p>
+          </div>
+        </div>
+        <div class="feature-row py-5">
+          <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)"
+              stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg></div>
+          <div>
+            <p class="font-semibold text-white text-sm">Seguimiento semanal</p>
+            <p class="text-silver/70 text-xs mt-0.5 leading-relaxed">Check-in cada semana. El programa evoluciona
+              contigo — no es un PDF genérico estático.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ink" id="elegir-plan">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <div class="divider-crimson"></div>
+        <h2 class="font-display text-4xl sm:text-5xl text-white mb-3 tracking-wide">ELIGE TU PLAN</h2>
+        <p class="text-silver text-sm">Selecciona el que se adapta a donde estás hoy. Puedes escalar cuando quieras.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-5 mb-8">
+
+        <div class="plan-card gradient-card" :class="plan==='nutricion' ? 'active' : ''" @click="plan='nutricion'">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <p class="text-xs font-bold tracking-widest uppercase text-silver mb-1">Plan</p>
+              <h3 class="font-display text-2xl text-white tracking-wide">NUTRICIÓN</h3>
+            </div>
+            <div class="check" :class="plan==='nutricion' ? 'bg-crimson border-crimson' : ''">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+          </div>
+          <div class="mb-4"><span class="font-display text-4xl text-white">$120.000</span><span
+              class="text-silver text-sm ml-1">/ mes</span></div>
+          <ul class="space-y-2 mb-5 text-sm">
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Plan nutricional
+                personalizado</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Macros y calorías
+                calculadas</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Lista de compras +
+                recetas</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Material PDF educativo</span>
+            </li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Seguimiento nutricional</span>
+            </li>
+            <li class="flex gap-2"><span class="exc">✕</span><span class="text-white/30">Rutinas de entrenamiento</span>
+            </li>
+            <li class="flex gap-2"><span class="exc">✕</span><span class="text-white/30">Videos de ejercicios HD</span>
+            </li>
+            <li class="flex gap-2"><span class="exc">✕</span><span class="text-white/30">Asesoría de
+                entrenamiento</span></li>
+          </ul>
+          <p class="text-xs text-silver/45 italic">Para quienes ya entrenan y quieren optimizar su alimentación.</p>
+        </div>
+
+        <div class="plan-card relative" :class="plan==='virtual' ? 'active' : ''" @click="plan='virtual'"
+          style="background:linear-gradient(160deg,#1A0508 0%,#1C1C1C 100%);">
+          <div class="badge-rec">⭐ Más popular</div>
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <p class="text-xs font-bold tracking-widest uppercase text-crimson mb-1">Plan</p>
+              <h3 class="font-display text-2xl text-white tracking-wide">VIRTUAL</h3>
+              <p class="text-xs text-silver/55 mt-0.5">Entrena desde donde estés</p>
+            </div>
+            <div class="check" :class="plan==='virtual' ? 'bg-crimson border-crimson' : ''">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+          </div>
+          <div class="mb-1"><span class="font-display text-4xl text-white">$200.000</span><span
+              class="text-silver text-sm ml-1">/ mes</span></div>
+          <p class="text-xs text-crimson mb-4">Todo en un plan · Ahorra $70.000</p>
+          <ul class="space-y-2 mb-5 text-sm">
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Todo el Plan Nutrición</span>
+            </li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80"><strong
+                  class="text-white">Rutinas personalizadas</strong> en video HD</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Material de apoyo completo
+                PDF</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80"><strong
+                  class="text-white">Asesoría y canal de preguntas</strong></span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Ajuste semanal del
+                programa</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Seguimiento de progreso</span>
+            </li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">100% por WhatsApp /
+                digital</span></li>
+            <li class="flex gap-2"><span class="exc">✕</span><span class="text-white/30">Acceso presencial en
+                sede</span></li>
+          </ul>
+          <p class="text-xs text-silver/45 italic">Máximo resultado, desde casa, gym o donde estés.</p>
+        </div>
+
+        <div class="plan-card gradient-card" :class="plan==='elite' ? 'active' : ''" @click="plan='elite'">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <p class="text-xs font-bold tracking-widest uppercase text-silver mb-1">Plan</p>
+              <h3 class="font-display text-2xl text-white tracking-wide">ÉLITE</h3>
+              <p class="text-xs text-silver/55 mt-0.5">Presencial · Medellín</p>
+            </div>
+            <div class="check" :class="plan==='elite' ? 'bg-crimson border-crimson' : ''">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+          </div>
+          <div class="mb-1"><span class="font-display text-4xl text-white">$350.000</span><span
+              class="text-silver text-sm ml-1">/ mes</span></div>
+          <p class="text-xs text-silver/40 mb-4">Acompañamiento VIP en sede</p>
+          <ul class="space-y-2 mb-5 text-sm">
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Todo el Plan Virtual</span>
+            </li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80"><strong class="text-white">5
+                  días/semana en sede</strong> Medellín</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Corrección de técnica en tiempo
+                real</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Valoración física presencial
+                constante</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Acceso a equipos y espacios de
+                la sede</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Soporte prioritario VIP</span>
+            </li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Asesoría nutricional
+                presencial</span></li>
+            <li class="flex gap-2"><span class="inc">✓</span><span class="text-white/80">Comunidad y grupo de
+                entrenamiento</span></li>
+          </ul>
+          <p class="text-xs text-silver/45 italic">El nivel máximo. Para quien quiere acompañamiento cara a cara.</p>
+        </div>
+
+      </div>
+
+      <div class="bg-ink-800 border border-white/8 rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-4 pb-4 border-b border-white/8">
+          <div>
+            <p class="text-xs text-silver uppercase tracking-widest mb-1">Plan seleccionado</p>
+            <p class="font-display text-xl text-white tracking-wide" x-text="planName"></p>
+            <p class="text-silver/45 text-xs mt-0.5" x-text="planDesc"></p>
+          </div>
+          <div class="text-right">
+            <p class="font-display text-3xl text-white" x-text="planPrice"></p>
+            <p class="text-xs text-silver/45">por mes</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 border border-crimson/30 bg-crimson/8 rounded-xl px-4 py-3 mb-5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)" stroke-width="2">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
+            <line x1="7" y1="7" x2="7.01" y2="7" />
+          </svg>
+          <span class="font-display text-crimson tracking-widest text-sm" x-text="planCode"></span>
+          <span class="text-silver/40 text-xs ml-auto">15% descuento inicial</span>
+        </div>
+
+        <button @click="openPopup()"
+          class="w-full gradient-crimson text-white font-bold text-base py-4 rounded-xl text-center tracking-widest uppercase shadow-crimson hover:opacity-92 transition-opacity mb-3">
+          🏋️ QUIERO ESTE PLAN — RESERVAR CUPO
+        </button>
+
+        <p class="text-center text-silver/35 text-xs">Sin pago anticipado · Respuesta en menos de 2 horas · Medellín y
+          toda Colombia</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 bg-ink-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <div class="divider-crimson"></div>
+        <h2 class="font-display text-3xl sm:text-4xl text-white tracking-wide">COMPARACIÓN DE PLANES</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm min-w-[540px]">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="text-left py-3 pr-4 text-silver font-semibold">Incluye</th>
+              <th class="text-center py-3 px-3 text-silver font-semibold text-xs">NUTRICIÓN<br><span
+                  class="text-white font-bold">$120.000</span></th>
+              <th class="text-center py-3 px-3 text-crimson font-bold text-xs">VIRTUAL<br><span
+                  class="text-white font-bold">$200.000</span></th>
+              <th class="text-center py-3 px-3 text-silver font-semibold text-xs">ÉLITE PRES.<br><span
+                  class="text-white font-bold">$350.000</span></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/6">
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Plan nutricional personalizado</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Macros y calorías calculadas</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Lista de compras + recetas</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Material PDF educativo</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Rutinas de entrenamiento</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Videos HD con técnica</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Asesoría y canal de preguntas</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Ajuste semanal del programa</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Acompañamiento presencial (5d/sem)</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Corrección técnica en tiempo real</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white/70">Acceso a equipos de sede</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center exc">✕</td>
+              <td class="py-3 px-3 text-center inc">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-ink">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <div class="divider-crimson"></div>
+        <h2 class="font-display text-4xl sm:text-5xl text-white tracking-wide mb-3">RESULTADOS REALES</h2>
+        <p class="text-silver text-sm">Sin filtros. Sin excusas. Solo trabajo.</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div class="review-card">
+          <div class="flex text-crimson text-sm mb-1">★★★★★</div>
+          <p class="text-silver/40 text-xs mb-3">Plan Virtual</p>
+          <p class="text-white/65 text-sm leading-relaxed mb-4">"En 6 semanas bajé 5 kg de grasa y subí masa. Los videos
+            son clarísimos y el canal de preguntas es increíble — el coach responde todo."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full gradient-crimson flex items-center justify-center text-white text-xs font-bold">
+              DA</div>
+            <div>
+              <p class="font-semibold text-white text-xs">Diego A.</p>
+              <p class="text-silver/40 text-xs">Medellín</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="flex text-crimson text-sm mb-1">★★★★★</div>
+          <p class="text-silver/40 text-xs mb-3">Plan Nutrición → Virtual</p>
+          <p class="text-white/65 text-sm leading-relaxed mb-4">"Empecé con nutrición y en 2 meses cambié completamente.
+            Luego pasé al Virtual y el salto fue brutal. Tener el material PDF como guía es un diferencial enorme."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-zinc-700 flex items-center justify-center text-white text-xs font-bold">
+              KM</div>
+            <div>
+              <p class="font-semibold text-white text-xs">Karen M.</p>
+              <p class="text-silver/40 text-xs">Bogotá</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="flex text-crimson text-sm mb-1">★★★★★</div>
+          <p class="text-silver/40 text-xs mb-3">Plan Élite Presencial</p>
+          <p class="text-white/65 text-sm leading-relaxed mb-4">"5 días a la semana con mi coach en la sede. La
+            corrección de técnica en tiempo real me salvó de lesiones que tenía hace años. Esto no es un gym — es un
+            centro de transformación."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-zinc-600 flex items-center justify-center text-white text-xs font-bold">
+              RV</div>
+            <div>
+              <p class="font-semibold text-white text-xs">Ricardo V.</p>
+              <p class="text-silver/40 text-xs">Medellín</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <div class="inline-flex items-center gap-3 bg-ink-800 border border-white/10 rounded-full px-6 py-2.5">
+          <div class="flex text-crimson">★★★★★</div>
+          <span class="text-white text-sm"><strong>4.9 / 5</strong> · <strong>+500 clientes</strong>
+            transformados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-ink-800">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+      <div class="divider-crimson"></div>
+      <h2 class="font-display text-4xl sm:text-5xl text-white tracking-wide mb-3">EL MOMENTO<br><span
+          class="text-crimson">ES AHORA</span></h2>
+      <p class="text-silver text-base mb-8 max-w-md mx-auto">No hay plan perfecto. Hay el que empiezas hoy.</p>
+      <div class="bg-ink border border-white/10 rounded-2xl p-6 sm:p-8 text-left">
+        <div class="flex items-center justify-between mb-5 pb-5 border-b border-white/8">
+          <div>
+            <p class="font-display text-xl text-white tracking-wide" x-text="planName"></p>
+            <p class="text-silver/45 text-xs mt-0.5" x-text="planDesc"></p>
+          </div>
+          <div class="text-right">
+            <p class="font-display text-3xl text-white" x-text="planPrice"></p>
+            <p class="text-xs text-silver/40">/ mes · sin contrato</p>
+          </div>
+        </div>
+        <div class="bg-ink-800 rounded-xl p-4 mb-5 space-y-2">
+          <div class="flex items-center gap-3 text-sm text-white/70"><svg width="15" height="15" viewBox="0 0 24 24"
+              fill="none" stroke="var(--crimson)" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>Tu coach te escribe en menos de <strong class="text-white ml-1">2 horas</strong></div>
+          <div class="flex items-center gap-3 text-sm text-white/70"><svg width="15" height="15" viewBox="0 0 24 24"
+              fill="none" stroke="var(--crimson)" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+            </svg>Programa personalizado en <strong class="text-white mx-1">24–48 horas</strong></div>
+          <div class="flex items-center gap-3 text-sm text-white/70"><svg width="15" height="15" viewBox="0 0 24 24"
+              fill="none" stroke="var(--crimson)" stroke-width="2">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>Todo por <strong class="text-white mx-1">WhatsApp</strong> — sin apps extra</div>
+        </div>
+        <button @click="openPopup()"
+          class="block w-full gradient-crimson text-white font-bold text-lg py-4 rounded-xl text-center tracking-widest uppercase shadow-crimson hover:opacity-92 transition-opacity mb-3 cursor-pointer">
+          🏋️ EMPEZAR MI TRANSFORMACIÓN
+        </button>
+        <p class="text-center text-silver/30 text-xs">Sin contratos · Sin pago anticipado obligatorio · Respuesta
+          garantizada</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 bg-ink">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <div class="divider-crimson"></div>
+        <h2 class="font-display text-3xl sm:text-4xl text-white tracking-wide">PREGUNTAS FRECUENTES</h2>
+      </div>
+      <div class="space-y-0">
+        <details class="group border-b border-white/8 py-4">
+          <summary class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer">¿En qué
+            se diferencia el Plan Virtual del Élite Presencial?<svg
+              class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg></summary>
+          <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">El Plan Virtual te da todo el sistema de
+            entrenamiento y nutrición de Advance Fitness, pero de forma 100% remota: videos, PDFs, asesoría y
+            seguimiento por WhatsApp. El Élite Presencial agrega la asistencia física 5 días a la semana en nuestra sede
+            en Medellín, con corrección de técnica en tiempo real.</div>
+        </details>
+        <details class="group border-b border-white/8 py-4">
+          <summary class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer">
+            ¿Necesito equipos específicos para el Plan Virtual?<svg
+              class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg></summary>
+          <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">No. Al inicio, tu coach te pregunta qué tienes
+            disponible: desde casa sin equipos, mancuernas, bandas elásticas hasta gym completo. El programa se diseña
+            exactamente según tu realidad, no según lo que ofrece un catálogo genérico.</div>
+        </details>
+        <details class="group border-b border-white/8 py-4">
+          <summary class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer">¿Cómo
+            funciona el canal de asesoría y preguntas?<svg class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg></summary>
+          <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">Tienes acceso directo a tu coach por WhatsApp
+            durante todo el mes. Puedes preguntar sobre técnica de ejercicios, dudas de nutrición, cómo hacer
+            sustituciones o pedir ajustes al programa. El tiempo de respuesta es de máximo 24 horas en días hábiles.
+          </div>
+        </details>
+        <details class="group border-b border-white/8 py-4">
+          <summary class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer">¿Puedo
+            cambiar de plan durante el mes?<svg class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg></summary>
+          <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">El cambio aplica al siguiente mes de renovación.
+            Muchos usuarios empiezan en Nutrición, ven los resultados y escalan a Virtual o Élite. La transición es
+            fluida porque tu coach ya conoce tu historial completo.</div>
+        </details>
+        <details class="group py-4">
+          <summary class="flex items-center justify-between text-sm font-semibold text-white/85 cursor-pointer">¿Hay
+            contratos o permanencia mínima?<svg class="chevron w-5 h-5 text-silver/40 flex-shrink-0 ml-4" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg></summary>
+          <div class="mt-3 text-sm text-silver/60 leading-relaxed pr-8">No. El plan es mensual y lo renuevas si quieres
+            continuar. Sin contratos, sin cargos automáticos, sin letras pequeñas. Queremos que te quedes porque ves
+            resultados, no porque estás obligado.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-ink-800 border-t border-white/8 py-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div class="flex items-center justify-center gap-2.5 mb-3">
+        <svg width="28" height="28" viewBox="0 0 100 110" fill="none">
+          <ellipse cx="50" cy="12" rx="9" ry="10" fill="#C41E3A" />
+          <rect x="46" y="21" width="8" height="7" rx="2" fill="#C41E3A" />
+          <path d="M32 28 C32 28 28 35 28 44 C28 50 32 54 50 55 C68 54 72 50 72 44 C72 35 68 28 68 28 Z"
+            fill="#C41E3A" />
+          <path d="M33 32 C33 32 36 38 50 39 L50 28 C42 27 33 32 33 32Z" fill="#9B1730" />
+          <path d="M67 32 C67 32 64 38 50 39 L50 28 C58 27 67 32 67 32Z" fill="#9B1730" />
+          <path d="M42 55 L42 76 C42 76 45 78 50 78 C55 78 58 76 58 76 L58 55 Z" fill="#C41E3A" />
+          <line x1="50" y1="55" x2="50" y2="78" stroke="#9B1730" stroke-width="1.5" />
+          <path d="M32 28 C32 28 22 24 17 20 C13 17 12 12 16 10 C20 8 24 12 26 16 C28 20 30 24 32 28Z" fill="#C41E3A" />
+          <ellipse cx="18" cy="15" rx="5" ry="7" fill="#E02347" transform="rotate(-20 18 15)" />
+          <circle cx="14" cy="9" r="5" fill="#C41E3A" />
+          <path d="M68 28 C68 28 78 24 83 20 C87 17 88 12 84 10 C80 8 76 12 74 16 C72 20 70 24 68 28Z" fill="#C41E3A" />
+          <ellipse cx="82" cy="15" rx="5" ry="7" fill="#E02347" transform="rotate(20 82 15)" />
+          <circle cx="86" cy="9" r="5" fill="#C41E3A" />
+          <path d="M42 76 C42 76 35 80 32 88 C30 93 32 100 36 102 C40 104 44 98 44 93 L46 76Z" fill="#C41E3A" />
+          <path d="M33 88 C35 84 40 82 44 83 L44 76 C38 76 33 88 33 88Z" fill="#9B1730" />
+          <path d="M58 76 C58 76 65 80 68 88 C70 93 68 100 64 102 C60 104 56 98 56 93 L54 76Z" fill="#C41E3A" />
+          <path d="M67 88 C65 84 60 82 56 83 L56 76 C62 76 67 88 67 88Z" fill="#9B1730" />
+          <ellipse cx="35" cy="103" rx="7" ry="4" fill="#9B1730" />
+          <ellipse cx="65" cy="103" rx="7" ry="4" fill="#9B1730" />
+        </svg>
+        <span class="logo-a">ADVANCE <span>FITNESS</span></span>
+      </div>
+      <p class="text-silver/25 text-xs mt-2 max-w-md mx-auto">Coaching fitness digital y presencial · Medellín,
+        Colombia. Los resultados individuales varían según adherencia al programa, genética y estilo de vida.</p>
       <div class="flex justify-center gap-5 mt-5 text-xs text-silver/20">
         <a href="#" class="hover:text-silver/50 transition-colors">Términos</a>
         <a href="#" class="hover:text-silver/50 transition-colors">Privacidad</a>
-        <a href="https://wa.me/573126703080" target="_blank" rel="noopener noreferrer"
-          class="hover:text-silver/50 transition-colors">Contacto</a>
+        <a href="https://wa.me/573000000000" target="_blank" class="hover:text-silver/50 transition-colors">Contacto</a>
       </div>
       <p class="text-silver/12 text-xs mt-4">© 2026 Advance Fitness · Todos los derechos reservados</p>
     </div>
   </footer>
 
-  <!-- ══════════════════════════════════════════════
-     [FLOAT] STICKY CTA MOBILE
-══════════════════════════════════════════════ -->
   <div id="sticky-cta"
     class="fixed bottom-0 left-0 right-0 z-50 bg-ink/97 backdrop-blur border-t border-white/10 py-3 px-4">
     <div class="max-w-sm mx-auto flex items-center gap-3">
@@ -1244,21 +1380,15 @@
         <p class="text-white text-xs font-semibold truncate" x-text="planName"></p>
         <p class="text-crimson text-[10px] font-bold" x-text="planPrice + ' / mes'"></p>
       </div>
-      <a :href="'https://wa.me/573126703080?text=' + waMsg" target="_blank" rel="noopener noreferrer"
-        aria-label="Empezar ahora por WhatsApp"
+      <button @click="openPopup()"
         class="gradient-crimson text-white text-xs font-bold px-5 py-2.5 rounded-xl whitespace-nowrap tracking-wide uppercase">
-        EMPEZAR →
-      </a>
+        RESERVAR →
+      </button>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════════════ -->
   <script>
     lucide.createIcons();
-
-    /* ── Sticky CTA ── */
     const stickyCTA = document.getElementById('sticky-cta');
     const trigger = document.querySelector('#elegir-plan');
     if (stickyCTA && trigger) {

@@ -1,5 +1,5 @@
 ---
-estado: en-curso
+estado: hecha
 dueño: ambos
 fecha: 2026-08-31
 tema: puestos user↔tenant y selector de organización sin re-login (+ rol recepcion)
@@ -35,3 +35,4 @@ Mockup de la página de Roles entregado con los tokens reales del tema
 - 2026-08-31: EN CURSO — arranca el rol `recepcion` (lo más chico con valor inmediato, GO de Yonatan). Los `puestos` y el handoff firmado quedan para la siguiente pasada.
 - 2026-08-31: **rol `recepcion` HECHO** (commit `fdee982`, sin push: repo público). Cobra, registra check-ins, renueva membresías y da de alta miembros; no anula pagos, no asigna roles, no ve entrenamiento. NO entra en `staff?` (se agregó `mostrador?` y se revisó cada uso). Medido por esta sesión, no por el agente: **936 ejemplos, 0 fallas**, cobertura 94,43%; policies 115→142 ejemplos; rubocop sin ofensas, brakeman 0 warnings. Hallazgo de regalo: `PlanPersonalizadoPolicy::Scope` filtraba por una columna `aprobado` inexistente — reventaba para cualquier rol no-staff; arreglado. La tarea SIGUE EN CURSO: su criterio de cierre son los `puestos` y el handoff firmado, que no se tocaron.
 - 2026-08-31: `fdee982` pusheado a `main` con GO directo de Yonatan (viajaron además dos commits suyos pendientes: Fase 20d y 20e).
+- 2026-08-31: **HECHA — criterio medido completo** (commit `28b3f95`, 70 archivos, sin push: repo público). Puestos con backfill idempotente; pertenencia validada POR PUESTO en cada request (revocar mata la sesión al siguiente); pase firmado de UN solo uso — índice único de token_digest, 15s (más estricto que los 30 del criterio), filtrado en logs de params y de redirect; log append-only con IP/UA; selector en navbar. Rol `recepcion` incluido de la pasada anterior. **Lo que pagó la entrega: TRES vueltas de refutación adversarial sobre suite siempre verde** — mediciones/checkins, luego membresías/renovaciones/pagos/suscripciones (¡anular pagos ajenos!), luego la familia de planes (rutina pisada en repro vivo): todos preexistentes, todos cerrados con policy_scope + ancla del dueño + specs de acción cruzada. Medido por la sesión, no por agentes: **996 ejemplos, 0 fallas, 94,66%** (base 936); rubocop limpio; brakeman 0. Residuos declarados para Yonatan: contador de borradores sin scope en broadcasts, plantillas como biblioteca global (¿por diseño?), y el DEPLOY de la app (Kamal) que no se corrió.

@@ -1,6 +1,6 @@
 ---
-estado: propuesta
-dueño: yonatan
+estado: hecha
+dueño: ambos
 fecha: 2026-08-31
 tema: recrear el standby frío de fitness en el homelab (murió con el disco y la resurrección no lo recreó)
 criterio_cierre: en la caja, docker ps -a muestra advance_fitness_app-web-<sha> en Created (jamás corriendo) con el env completo, y el sha del failover en DEPLOY.md actualizado
@@ -33,3 +33,4 @@ cosas de una. Regla intocable del script: `docker create`, JAMÁS `run`
 
 ## Bitácora
 - 2026-08-31: tarea creada; imagen transferida y script en posición; DEPLOY.md corregido (IP muerta → homelab.casa, y la verdad del standby ausente con fecha).
+- 2026-08-31: **HECHA con GO ("recrea el standby con el camino directo")** — criterio medido: contenedor `…-web-28b3f95…` en **Created** (jamás corriendo), env de **13/13 variables** clonado del contenedor de producción por ssh caja→prod con agente reenviado (los secretos jamás pasaron por la Mac ni la sesión), y el sha del failover actualizado en DEPLOY.md. Verificación del runbook: 0 contenedores de fitness corriendo en la caja, producción intacta (302). Dos lecciones pagadas en el camino, ambas commiteadas: el agente de la Mac estaba VACÍO (el ssh directo usa la llave por archivo; hubo que `ssh-add` para que -A reenviara algo), y la versión warn-only del script creó un cascarón con CERO variables cuando el ssh falló — ahora aborta sin llaves críticas. El script ganó el modo `usuario@host:contenedor`.

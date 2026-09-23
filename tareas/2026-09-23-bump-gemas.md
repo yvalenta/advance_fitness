@@ -1,5 +1,5 @@
 ---
-estado: propuesta
+estado: en-curso
 dueño: sesión
 fecha: 2026-09-23
 tema: actualizar las gemas atrasadas de la app y aprovechar lo que traigan los bumps
@@ -38,3 +38,6 @@ Cuidados:
 ## Bitácora
 - 2026-09-23: declarada. La sesión que la recibió estaba sobre el umbral de
   contexto (regla de corte de /casa) y no la empezó.
+- 2026-09-23: tomada por una sesión fresca (/casa bump-gemas). Worktree
+  `~/Developer/worktrees/advance_fitness_app--bump-gemas`, rama
+  `tarea/bump-gemas` desde origin/main fe27d5b.

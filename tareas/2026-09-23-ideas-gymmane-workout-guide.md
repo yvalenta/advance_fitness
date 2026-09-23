@@ -1,5 +1,5 @@
 ---
-estado: propuesta
+estado: en-curso
 dueño: ambos
 fecha: 2026-09-23
 tema: backlog de la revisión de GymMane y workout-guide contra la app (fallos propios, riesgo de media Gym Visual, ideas a adoptar)
@@ -30,8 +30,12 @@ comprobé leyendo el código, el resto es lectura de agente, no verificado a man
       otorgamiento retroactivo silencioso (si no, el primer deploy inunda /novedades).
 - [ ] ✔ "al fallo" se registra como 1 rep: `sesion_controller.js:178`
       (`parseInt` → NaN → `|| 1`); contamina PR, 1RM y volumen.
-- [ ] ✔ `RecordatorioRachaJob` no mira `feature?("gamificacion")` del tenant (Nota 23g).
-- [ ] ✔ `GestionPlanesController#update` (JSON avanzado) no pasa por
+- [x] ✔ `RecordatorioRachaJob` no mira `feature?("gamificacion")` del tenant (Nota 23g).
+      → rama `fallos-gymmane` (pusheada, falta merge). Su spec destapó
+      `2026-09-23-perfil-juego-tenant-cambio`. Aparte, previo y sin tocar: un
+      tenant `activo: false` sigue recibiendo el push.
+- [ ] → tarea `2026-09-23-json-plan-validador` (intento revertido por el
+      refutador). ✔ `GestionPlanesController#update` (JSON avanzado) no pasa por
       `Ejercicios::ValidadorRutina.corregir!`: sin uid ni catálogo cerrado.
 - [ ] Por lectura de agente: refresh en /sesion vuelve al ejercicio 1
       (`sesion_controller.js`, `this.actual = 0`); `Juego::MapaMuscular` da 0 al
@@ -81,3 +85,14 @@ comprobé leyendo el código, el resto es lectura de agente, no verificado a man
 - 2026-09-23: revisión con workflow (6 comparadores sonnet + 6 refutadores de
   la casa, 81 ideas + 21 omitidas); fallos ✔ comprobados a mano en el código.
   Racha arreglada en su propia tarea; progresión en otra sesión.
+- 2026-09-23 (sesión 2): recordatorio de racha respeta `gamificacion` del
+  tenant parado → rama `fallos-gymmane` (suite 1008/0, rubocop limpio,
+  brakeman 0 warnings vía `bundle exec brakeman` porque `bin/brakeman` aborta
+  por `--ensure-latest`; spec con dientes: falla sin el fix; refutador sin
+  hallazgo en la racha). El intento del JSON del staff con `corregir!` se
+  revirtió (4 hallazgos, 2 altos) → `2026-09-23-json-plan-validador`. Nuevo
+  fallo previo → `2026-09-23-perfil-juego-tenant-cambio`. La progresión ya
+  tiene fix en `claude/modest-hugle-9ef1c8` (`1dcb0a6`, sin mergear, sin
+  revisar acá). Siguen: logros, "al fallo" (necesita decidir la UX: stepper
+  de reps reales, Nota 23a, o no registrar la serie — el modelo exige reps ≥1
+  y `registrar_cumplido!` también fuerza 1), ítems por lectura de agente.

@@ -28,7 +28,7 @@ comprobé leyendo el código, el resto es lectura de agente, no verificado a man
 - [ ] ✔ "al fallo" se registra como 1 rep: `sesion_controller.js:178`
       (`parseInt` → NaN → `|| 1`); contamina PR, 1RM y volumen.
 - [x] ✔ `RecordatorioRachaJob` no mira `feature?("gamificacion")` del tenant (Nota 23g).
-      → rama `fallos-gymmane` (pusheada, falta merge). Su spec destapó
+      → rama `fallos-gymmane`, mergeada en main (`191c769`, sin desplegar). Su spec destapó
       `2026-09-23-perfil-juego-tenant-cambio`. Aparte, previo y sin tocar: un
       tenant `activo: false` sigue recibiendo el push.
 - [ ] → tarea `2026-09-23-json-plan-validador` (intento revertido por el

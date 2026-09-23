@@ -3,7 +3,7 @@ estado: en-curso
 dueño: ambos
 fecha: 2026-09-23
 tema: backlog de la revisión de GymMane y workout-guide contra la app (fallos propios, riesgo de media Gym Visual, ideas a adoptar)
-criterio_cierre: cada ítem de abajo queda hecho, en su propia tarea, o descartado con motivo en una Nota 28 del SDD; la decisión de Gym Visual la toma Yonatan
+criterio_cierre: cada ítem de abajo queda hecho, en su propia tarea, o descartado con motivo en una Nota 29 del SDD (la 28 es la de logros); la decisión de Gym Visual la toma Yonatan
 ---
 
 Revisión (23-sep-2026) de [InlitX/GymMane](https://github.com/InlitX/GymMane)
@@ -18,13 +18,10 @@ comprobé leyendo el código, el resto es lectura de agente, no verificado a man
 - [x] Racha muerta encendida en dashboard y ranking → tarea `2026-09-23-racha-vigente`
       (commit `15b2077`, rama pusheada, falta merge). Su refutador destapó
       `2026-09-23-racha-fechas-futuras`.
-- [ ] ✔ Progresión congelada tras el primer +2.5 kg: `SesionesController#peso_para_registrar`
-      prioriza "la vez pasada" sobre `peso_sugerido_kg` y el guard de
-      `Progresion::Regla` (regla.rb:50) no vuelve a disparar. **La tomó otra
-      sesión (worktree `claude/*`, "Fix session weight ignoring raised suggested
-      weight")**: revisar su diff; el spec `sesiones_controller_spec.rb:130`
-      ("la vez pasada, no el sugerido") protegía el fallo.
-- [ ] ✔ Logros nunca otorgados: fuera de specs nadie crea un `LogroObtenido`,
+- [x] ✔ Progresión congelada: arreglada por otra sesión (`1dcb0a6` + `c1dd50e`, merge
+      `4c4d32f` en main, SIN desplegar). Revisión adversarial → tarea
+      `2026-09-23-progresion-revision` (17 hallazgos, 1 alto; decisiones tomadas).
+- [ ] → tarea `2026-09-23-logros-otorgados` (diseño hecho, sin código). ✔ Logros nunca otorgados: fuera de specs nadie crea un `LogroObtenido`,
       pero el muro y la landing (`landing/autoservicios/new.html.erb:93`) los
       prometen. Necesita motor + vitrina + cola de no vistos (`visto_en`) +
       otorgamiento retroactivo silencioso (si no, el primer deploy inunda /novedades).
@@ -96,3 +93,7 @@ comprobé leyendo el código, el resto es lectura de agente, no verificado a man
   revisar acá). Siguen: logros, "al fallo" (necesita decidir la UX: stepper
   de reps reales, Nota 23a, o no registrar la serie — el modelo exige reps ≥1
   y `registrar_cumplido!` también fuerza 1), ítems por lectura de agente.
+- 2026-09-23 (sesión 3): progresión revisada con workflow → `progresion-revision`;
+  logros diseñados → `logros-otorgados`; Yonatan decidió: mesociclo como está, PR
+  de sesión sin puntos, juego de la persona, logros se otorgan con gamificación
+  apagada. Cierre por contexto >200k, sin código nuevo.

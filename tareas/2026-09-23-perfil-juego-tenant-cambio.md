@@ -34,3 +34,8 @@ lectura, cuántos perfiles ya están desfasados:
 
 ## Bitácora
 - 2026-09-23: hallado y reproducido en spec local; sin tocar código.
+- 2026-09-23: Yonatan decidió que el juego es **de la persona**: el perfil sigue a la
+  cuenta (`estacionar_en!` re-sincroniza `tenant_id`), con privacidad fail-closed
+  del ranking y el muro en el gimnasio nuevo. Se hace como Paso 1 de
+  `2026-09-23-logros-otorgados` (misma rama `tarea/logros`), porque los logros
+  dependen de esto. Diseño en esa tarea.

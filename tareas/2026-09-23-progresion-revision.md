@@ -96,6 +96,14 @@ tailwindcss:build` una vez por worktree. Sin probar todavía: la primera corrida
 confirma que los 6 de push quedan verdes. Docker estuvo lento (contenedores
 varios minutos en "Created").
 
+## Integración a main (regla de Yonatan, 23-sep-2026)
+Historia lineal, SIN commits de merge (el ruleset de GitHub lo exige): `git fetch
+origin` → `git rebase origin/main` → suite verde → `git push origin HEAD:main`.
+Si lo rechaza por non-fast-forward, otro rebase; jamás `--force` sobre main. Leer
+la salida COMPLETA del push (sin `tail`) y reportar cualquier "Bypassed rule
+violations". Contraejemplo: el merge `191c769` de `fallos-gymmane` entró por el
+bypass y el aviso se perdió por filtrar la salida.
+
 ## Bitácora
 - 2026-09-23: revisión corrida; hallazgos arriba. Sin tocar código todavía.
 - 2026-09-23 (cierre por contexto >200k): Yonatan decidió mesociclo y PR;

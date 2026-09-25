@@ -1,6 +1,6 @@
 ---
 estado: en-curso
-dueño: claude
+dueño: sesión
 fecha: 2026-09-23
 tema: los logros existen en catálogo, muro y landing pero nadie los otorga — motor de otorgamiento, vitrina, cola de no vistos y retroactivo silencioso
 criterio_cierre: un miembro que cumple el criterio de un logro activo lo obtiene sin intervención (spec con dientes: falla sin el motor), lo ve en su vitrina y una sola vez como novedad; el primer deploy otorga lo ya ganado sin inundar /novedades; respeta `feature?("gamificacion")` del tenant; SDD actualizado antes del código; `dip test`, `dip rubocop` y `dip brakeman` en verde

@@ -75,3 +75,35 @@ de la Línea Roja (Yonatan).
   («va»), y eso reemplaza el «déjalo frío» del mismo día. La sesión que la
   declaró estaba sobre los 200k: dejó el worktree creado y la tarea
   escrita, sin código.
+- 2026-10-01 (sesión 2): código en la rama `tarea/failover-sin-choque`,
+  commit `af38221`, sin integrar a `main`. Tabla `latidos` (una fila: la
+  máquina titular y su latido con `now()` de la base; umbral de 2 min) +
+  `lib/guarda_de_instancia.rb`: middleware 503 (menos `/up`) en la no
+  titular, y hook `SolidQueue.on_start` que espera turno (no lanza: Solid
+  Queue se traga las excepciones de sus hooks). Máquina = `KAMAL_HOST`;
+  activa solo en producción. Entrypoint con `SALTAR_DB_PREPARE=1`; puma solo
+  con `SOLID_QUEUE_IN_PUMA` true/1; el script crea la web tibia y el
+  contenedor `jobs` (`./bin/jobs`, sin alias) detenidos; DEPLOY.md §4 y §4b
+  nuevos. Medido con la imagen de producción contra la base local: la web
+  tibia da 0 conexiones en 13 muestras durante 6 min y 0 tablas (no migró);
+  el control sin la variable crea 39. La activa queda en 5 conexiones
+  estables (4 de la cola + 1 de la guarda). Failover con la activa
+  detenida: la web sirve a t+124 s y la cola arranca a t+147 s. Al ceder,
+  la cola para con gracia. `dip test` 1038/0 y `dip rubocop` en verde.
+  Prueba negativa: sin el middleware fallan 3/4; sin el hook, 2/5.
+  **Falta (sesión fresca):**
+  1. `dip brakeman` sale con 5 por el `--ensure-latest` de `bin/brakeman`
+     (8.0.6 contra 8.1.0), sin escanear; el escaneo directo da 0 warnings.
+     Subir brakeman (¿worktree `bump-gemas`?) o decidir con Yonatan.
+  2. `docker stop` a una cola en espera tarda 10 s y sale con 137: el
+     `sleep` de `esperar_turno` no atiende el TERM. Con Kamal (`proxy:
+     false`, `-t` = drain_timeout 130 s), un deploy a Lightsail siendo no
+     titular podría tardar hasta 130 s en parar al viejo. Mejora: espera
+     que atienda señales (sin depender de privados de Solid Queue).
+  3. Una cola en espera ya está registrada en `solid_queue_processes`
+     (el boot corre antes que `on_start`) y retiene ~2 conexiones; está
+     documentado en §4b.
+  4. Refutador sobre el diff → integrar a `main` (rebase + ff) → deploy a
+     Lightsail → re-sincronizar el homelab con el script nuevo y encender la
+     web tibia: los tres últimos son de Yonatan. Hasta entonces sigue el
+     standby frío `9d1cc8e` (DEPLOY.md, transición).

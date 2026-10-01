@@ -49,3 +49,7 @@ Pasos que faltan, en orden:
   como proceso en segundo plano de la sesión que corrió el deploy; esa
   sesión se cortó por la regla de los 200k antes de ver si terminó. Pasos
   3–5 sin hacer.
+- 2026-10-01: la transferencia terminó a las 03:34:28 UTC (empezó 02:50:40):
+  `Loaded image: localhost:5555/advance_fitness_app:9d1cc8e67d0ad1b74598c17253ef0371d1590bdb`,
+  exit 0. Paso 1 hecho; confirmar el id `sha256:2520e7f8…` en el homelab y
+  seguir desde el paso 2.

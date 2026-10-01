@@ -1,0 +1,51 @@
+---
+estado: en-curso
+dueño: sesión
+fecha: 2026-09-30
+tema: re-sincronizar el standby frío del homelab al sha de producción 9d1cc8e (hoy sigue en b2cc9f8, con sondeo a 0,1 s)
+criterio_cierre: en el homelab, advance_fitness_app-web-9d1cc8e… en Created y 0 contenedores advance_fitness corriendo; las 13 claves del script iguales a producción por hash; DEPLOY.md con el comando de failover y la «última sincronización» en 9d1cc8e; producción responde 200
+---
+
+Producción pasó a `9d1cc8e` el 2026-09-30 (tarea `egress-supabase-sondeo`).
+El standby del homelab sigue en `b2cc9f8`: si se promueve, vuelve el sondeo
+de Solid Queue a 0,1 s y con él el egress de Supabase. Yonatan pidió
+re-sincronizarlo. El procedimiento es DEPLOY.md §4 del repo de la app. Ya
+se verificó que `config/deploy.yml`, `.kamal/` y `Dockerfile` no cambiaron
+entre `b2cc9f8` y `9d1cc8e`, así que clonar el entorno del standby viejo da
+las mismas variables.
+
+Pasos que faltan, en orden:
+
+1. **Imagen en el homelab.** Verificar con
+   `ssh ynt@homelab.casa 'docker image inspect localhost:5555/advance_fitness_app:9d1cc8e67d0ad1b74598c17253ef0371d1590bdb --format "{{.Id}}"'`.
+   En Lightsail el id es `sha256:2520e7f8…`. Si no está, repetir el paso 1
+   de DEPLOY.md §4 (save | gzip → gunzip | load, ~1 GB por la WiFi de
+   2,4 GHz).
+2. **Script.** `/tmp/sincronizar_standby.sh` quedó copiado con sha256
+   `a2db5b92…`, igual a `ops/sincronizar_standby.sh`. Si `/tmp` se limpió,
+   volver a copiarlo con `scp`.
+3. **Crear el contenedor detenido:**
+   `ssh ynt@homelab.casa "/tmp/sincronizar_standby.sh advance_fitness_app-web-b2cc9f87918b8fd18b0be451285355aa16ad6132 9d1cc8e67d0ad1b74598c17253ef0371d1590bdb"`.
+4. **Las tres verificaciones de DEPLOY.md §4:**
+   - 0 contenedores corriendo;
+   - el nuevo en Created;
+   - producción en 200.
+
+   Además, comparar por hash, sin imprimir valores, las claves del nuevo
+   standby contra el contenedor de producción. El `.env` de la Mac pudo
+   cambiar desde el 23-sep, y en ese caso el clon del viejo traería valores
+   viejos.
+5. **DEPLOY.md:**
+   - comando de failover y «última sincronización» → `9d1cc8e`;
+   - anotar que `b2cc9f8` (contenedor e imagen) sigue en el homelab, detenido.
+
+   Borrarlo es decisión de Yonatan (lista 2).
+
+## Bitácora
+- 2026-09-30: estado medido en el homelab: el standby `b2cc9f8` y
+  `cloudflared-main` están en Created; hay 0 contenedores advance corriendo
+  y 367 GB libres. El script se copió a `/tmp` y su checksum coincide con
+  el del repo. La transferencia de la imagen arrancó a las 02:50:40 UTC
+  como proceso en segundo plano de la sesión que corrió el deploy; esa
+  sesión se cortó por la regla de los 200k antes de ver si terminó. Pasos
+  3–5 sin hacer.

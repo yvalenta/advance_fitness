@@ -82,3 +82,13 @@ Pasos que faltan, en orden:
   sincronización» en `9d1cc8e`, `b2cc9f8` anotado como respaldo detenido
   y el runbook §4 con las cuatro verificaciones. Worktree desmontado.
   Borrar `b2cc9f8` (contenedor e imagen) queda como decisión de Yonatan.
+- 2026-10-01 (~04:15 UTC): decisión de Yonatan: borrar `b2cc9f8`. Lo corrió
+  él con `!` (`docker rm` y `docker rmi`, sin `-f`): se borraron el
+  contenedor y la imagen `sha256:381c7a5622c0…`. Queda una sola imagen
+  advance (`9d1cc8e`, `2520e7f81b54`); el standby `9d1cc8e` y
+  `cloudflared-main` siguen en Created, con 0 contenedores corriendo.
+  DEPLOY.md quedó en main como `664ec64` (fast-forward sobre `f71676f`):
+  `9d1cc8e` es el único standby. El CI de `664ec64` volvió a fallar en
+  `scan_ruby`; lint y scan_js pasaron, y test seguía corriendo al escribir
+  esto. En `f71676f` la causa fue `--ensure-latest`: el lockfile tiene
+  Brakeman 8.0.6 y ya salió la 8.1.0. Le toca a la tarea `bump-gemas`.

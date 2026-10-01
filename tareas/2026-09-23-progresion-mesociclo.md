@@ -23,3 +23,9 @@ consecuencias en SDD Nota 27g.
   NO desplegado (Kamal es de Yonatan).
 - Queda observado, sin tocar: terminado el mesociclo la sesión se queda en la
   última semana (descarga, 0.85) hasta renovar el plan — la regla no dispara.
+- 2026-09-30: desplegado a producción con `main` 9d1cc8e (contenedor
+  `advance_fitness_app-web-9d1cc8e…`, `kamal deploy` exit 0, post-deploy y
+  `/up` 200). El deploy era para el sondeo de `egress-supabase-sondeo`, pero
+  llevó todo `main`: la progresión (`1dcb0a6` + `c1dd50e`) y el recordatorio
+  de racha (`466365c`). Yonatan eligió desplegar todo `main` sabiendo que
+  `progresion-revision` sigue con hallazgos sin arreglar.

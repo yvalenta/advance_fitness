@@ -17,17 +17,15 @@ cada 0,1 s, y cada vuelta hace 4 viajes (BEGIN, `solid_queue_pauses`,
 también cada 0,1 s mientras hubiera una pestaña suscrita, y el navbar de
 entrenador/admin siempre lo está.
 
-El arreglo está en la rama `polling-egress-supabase` de la app, commit
-`b96295f`, sin pushear ni desplegar. Pone el worker a 2 s y Cable en
-producción a `1.second`, y agrega una guarda en
-`spec/config/sondeo_supabase_spec.rb`. Lo que falta es de Yonatan:
-
-1. **Mirar el Usage de la org** en el dashboard (egress desglosado por
-   servicio, sobre todo «Shared Pooler Egress»). La sesión no tiene login
-   en el dashboard y el MCP de Supabase no expone el Usage. Las cifras de
-   abajo son aritmética del protocolo, no medición de Supabase.
-2. Integrar a `main` (rebase + fast-forward) y **desplegar con Kamal**.
-   Desplegar está en la lista 2 de la Línea Roja.
+El arreglo está en `main` de la app: commits `b96295f` y `9d1cc8e`, rama
+`polling-egress-supabase`. Pone el worker y el dispatcher de Solid Queue a
+2 s y Cable en producción a `1.second`. La guarda
+`spec/config/sondeo_supabase_spec.rb` cubre workers, dispatchers y Cable.
+Lo que falta es de Yonatan: **mirar el Usage de la org** en el dashboard
+(egress desglosado por servicio, sobre todo «Shared Pooler Egress»). La
+sesión no tiene login en el dashboard y el MCP de Supabase no expone el
+Usage. Las cifras de abajo son aritmética del protocolo, no medición de
+Supabase.
 
 ### La cuenta (estimación; falta confirmarla en el dashboard)
 
@@ -61,16 +59,16 @@ GB por cada 30 días:
 |---|---|---|---|---|
 | hoy, piso | 4,14 | 0,23 | 0,97 | **5,34** |
 | hoy, techo | 10,99 | 0,80 | 1,41 | **13,2** |
-| con el cambio, piso | 0,23 | 0,23 | 0,10 | **0,56** |
-| con el cambio, techo | 0,61 | 0,80 | 0,14 | **1,55** |
+| con el cambio, piso | 0,23 | 0,12 | 0,10 | **0,45** |
+| con el cambio, techo | 0,61 | 0,41 | 0,14 | **1,16** |
 
 El total de hoy no cuenta el egress del proyecto viejo de Resplandor, que
 comparte la cuota.
 
-Con el cambio, el dispatcher (1 s) queda como el sumando más grande. Subirlo
-a 2 s ahorra ~0,1 GB (piso) o ~0,4 GB (techo). El costo es que el push del
-rest-timer (`NotificarDescansoJob`, único job con `wait:`) llegaría hasta
-~1 s más tarde. No se tocó, y la decisión queda para Yonatan.
+El dispatcher sube a 2 s por decisión de Yonatan (2026-09-30). Solo mueve los
+jobs con `wait:`; los recurrentes van directo a ready. El costo es que el
+push del rest-timer (`NotificarDescansoJob`) puede llegar hasta ~4 s tarde:
+2 s de dispatcher más 2 s de worker.
 
 ### Alternativa evaluada, no hecha: sacar queue/cable/cache de Supabase
 
@@ -97,3 +95,44 @@ Si se quiere, va como tarea propia después de ver el efecto de este cambio.
   - Prueba negativa: con los dos valores de vuelta a 0.1 la spec nueva da
     2 examples, 2 failures; restaurados, 2 examples, 0 failures.
   - `SolidQueue::Configuration` arma `worker polling_interval=2`.
+- 2026-09-30: decisión de Yonatan: el dispatcher también a 2 s (commit
+  `9d1cc8e`; la guarda cubre workers y dispatchers, con prueba negativa:
+  dispatcher en 1 → 3 examples, 1 failure). Suite: 1024 examples, 0 failures;
+  rubocop sin ofensas; brakeman 0 warnings.
+- 2026-09-30: Yonatan dio el GO de push y deploy y eligió desplegar todo
+  `main` (incluye la progresión pendiente de `progresion-revision`).
+  - Push de `main`: `859600c..9d1cc8e`, por fast-forward. GitHub avisó
+    «Bypassed rule violations»: PR y 2 status checks, el bypass conocido.
+  - Deploy: `kamal _2.12.0_ deploy` desde el worktree, con symlinks
+    temporales a `master.key` y `.env`, que se borraron después. Exit 0 en
+    377 s; el post-deploy salió en 0. Contenedor
+    `advance_fitness_app-web-9d1cc8e…`. El log de Solid Queue confirma
+    `polling_interval: 2` en el worker y el dispatcher.
+- 2026-09-30, incidente del deploy: el worker nuevo no sondeó de 01:27:08 a
+  ~01:42.
+  - En `pg_stat_statements`, `solid_queue_pauses` se quedó en 48 586 993.
+  - Los heartbeats del supervisor, el dispatcher y el scheduler quedaron
+    clavados en 01:27:08.
+  - Los 6 jobs encolados a las 01:30, 01:35 y 01:40 esperaron.
+  - `pg_stat_activity` no mostraba nada bloqueado; todas las sesiones
+    estaban `idle` en ClientRead.
+  - Entre 01:40 y 01:45 se destrabó solo: corrieron los 6 jobs, y el
+    supervisor reemplazó al dispatcher y al scheduler (exit 0, su registro
+    había sido podado).
+  - Hipótesis sin probar: conexiones al pooler abiertas a las ~01:27 que
+    quedaron mudas (el worker viejo también dejó de sondear hacia 01:26:52)
+    y que cayeron cuando venció el timeout de retransmisión TCP, que en
+    Linux ronda los 15 min.
+  - A las 02:00 se hizo un `docker restart -t 30` con GO de Yonatan. La
+    sesión no volvió a medir antes de actuar, y para entonces ya no hacía
+    falta. Costó ~13 s de 502 (02:00:06–02:00:19); `Release claimed jobs
+    size: 0`, ningún job perdido.
+- 2026-09-30: medición post-deploy en `pg_stat_statements`, ventana de 64,4 s
+  (02:00:55 → 02:02:00 UTC). `solid_queue_pauses` +32 (**0,50/s**, antes
+  8,93/s); `solid_queue_scheduled_executions` +32 (0,50/s, antes 0,98/s);
+  `begin` 1,06/s (antes 9,98/s). La base entera pasó de 39 a 4,1
+  sentencias/s, y quedan 0 ready executions pendientes. La parte medible del
+  criterio de cierre se cumple. Falta el visto de Yonatan sobre el Usage de
+  la org en el dashboard. El standby del homelab sigue en `b2cc9f8`, con
+  sondeo a 0,1 s y sin la progresión; re-sincronizarlo (DEPLOY.md §4) no se
+  hizo.

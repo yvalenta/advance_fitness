@@ -97,3 +97,9 @@ comprobé leyendo el código, el resto es lectura de agente, no verificado a man
   logros diseñados → `logros-otorgados`; Yonatan decidió: mesociclo como está, PR
   de sesión sin puntos, juego de la persona, logros se otorgan con gamificación
   apagada. Cierre por contexto >200k, sin código nuevo.
+- 2026-09-30: desplegado a producción con `main` 9d1cc8e (contenedor
+  `advance_fitness_app-web-9d1cc8e…`, `kamal deploy` exit 0, post-deploy y
+  `/up` 200). El deploy era para el sondeo de `egress-supabase-sondeo`, pero
+  llevó todo `main`: la progresión (`1dcb0a6` + `c1dd50e`) y el recordatorio
+  de racha (`466365c`). Yonatan eligió desplegar todo `main` sabiendo que
+  `progresion-revision` sigue con hallazgos sin arreglar.

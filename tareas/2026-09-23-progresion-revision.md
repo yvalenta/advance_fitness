@@ -110,3 +110,9 @@ bypass y el aviso se perdió por filtrar la salida.
   plan del carril A escrito arriba; worktree creado sin cambios. La siguiente
   sesión arranca en el paso 1. Refutador obligatorio al final: es dinero de
   puntos y ranking.
+- 2026-09-30: desplegado a producción con `main` 9d1cc8e (contenedor
+  `advance_fitness_app-web-9d1cc8e…`, `kamal deploy` exit 0, post-deploy y
+  `/up` 200). El deploy era para el sondeo de `egress-supabase-sondeo`, pero
+  llevó todo `main`: la progresión (`1dcb0a6` + `c1dd50e`) y el recordatorio
+  de racha (`466365c`). Yonatan eligió desplegar todo `main` sabiendo que
+  `progresion-revision` sigue con hallazgos sin arreglar.

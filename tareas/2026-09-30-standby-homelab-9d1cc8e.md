@@ -1,5 +1,5 @@
 ---
-estado: en-curso
+estado: bloqueada
 dueño: sesión
 fecha: 2026-09-30
 tema: re-sincronizar el standby frío del homelab al sha de producción 9d1cc8e (hoy sigue en b2cc9f8, con sondeo a 0,1 s)
@@ -53,3 +53,17 @@ Pasos que faltan, en orden:
   `Loaded image: localhost:5555/advance_fitness_app:9d1cc8e67d0ad1b74598c17253ef0371d1590bdb`,
   exit 0. Paso 1 hecho; confirmar el id `sha256:2520e7f8…` en el homelab y
   seguir desde el paso 2.
+- 2026-10-01 (sesión fría, 03:00–03:45 UTC): en el homelab, el id de la
+  imagen es `sha256:2520e7f81b54…`, el mismo que en Lightsail. Lightsail usa
+  el almacén containerd, así que el stream fueron ~270 MB de capas ya
+  comprimidas (gzip -1 a razón 1,00), a 60–140 KB/s. Las 13 claves del
+  script en el standby `b2cc9f8` son iguales a las de producción `9d1cc8e`
+  por hash, y no sobra ni falta ninguna en ningún lado. El script sigue con
+  sha256 `a2db5b92…` y hay 0 contenedores advance corriendo. **El paso 3 lo
+  negó el clasificador de permisos de Claude Code («Production Deploy»).**
+  Lo desbloquea Yonatan, corriéndolo él o dando el permiso; los pasos 4–5
+  esperan a ese. Quedó DEPLOY.md §4 corregido, sin commit, en el worktree
+  `~/Developer/worktrees/advance_fitness_app--standby-homelab-9d1cc8e`
+  (rama `tarea/standby-homelab-9d1cc8e`): el tamaño medido y una cuarta
+  verificación, el diff del env por hash contra producción. Se probó contra
+  `b2cc9f8`: solo difieren `KAMAL_CONTAINER_NAME` y `KAMAL_VERSION`.

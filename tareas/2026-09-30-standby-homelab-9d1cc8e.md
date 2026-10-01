@@ -1,5 +1,5 @@
 ---
-estado: bloqueada
+estado: hecha
 dueño: sesión
 fecha: 2026-09-30
 tema: re-sincronizar el standby frío del homelab al sha de producción 9d1cc8e (hoy sigue en b2cc9f8, con sondeo a 0,1 s)
@@ -67,3 +67,18 @@ Pasos que faltan, en orden:
   (rama `tarea/standby-homelab-9d1cc8e`): el tamaño medido y una cuarta
   verificación, el diff del env por hash contra producción. Se probó contra
   `b2cc9f8`: solo difieren `KAMAL_CONTAINER_NAME` y `KAMAL_VERSION`.
+- 2026-10-01 (~03:50 UTC): Yonatan dio el GO al paso 3. El clasificador lo
+  volvió a negar aun con el GO, así que Yonatan corrió el script él mismo
+  con `!` desde la sesión: «creando advance_fitness_app-web-9d1cc8e…
+  (DETENIDO) con 13 variables», en Created. Las cuatro verificaciones:
+  0 contenedores advance corriendo; `9d1cc8e`, `b2cc9f8` y
+  `cloudflared-main` en Created, con las mismas redes y alias
+  (`docker-lab_proxy-network` y `kamal` con `rails-app`), `unless-stopped`
+  y volumen que el viejo; producción `/up` en 200 (la raíz da 302 a
+  `/session/new`, que da 200); el env del nuevo es idéntico al de
+  producción por hash en 27 claves (todas salvo `KAMAL_HOST`). DEPLOY.md
+  quedó en main como `f71676f` (rebase + fast-forward sobre `9d1cc8e`, con
+  los avisos de bypass de siempre): el failover y la «última
+  sincronización» en `9d1cc8e`, `b2cc9f8` anotado como respaldo detenido
+  y el runbook §4 con las cuatro verificaciones. Worktree desmontado.
+  Borrar `b2cc9f8` (contenedor e imagen) queda como decisión de Yonatan.

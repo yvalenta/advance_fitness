@@ -1,5 +1,5 @@
 ---
-estado: en-curso
+estado: bloqueada
 dueño: sesión
 fecha: 2026-09-23
 tema: actualizar las gemas atrasadas de la app y aprovechar lo que traigan los bumps
@@ -77,3 +77,44 @@ Cuidados:
   Rails y rspec). Ojo entorno: hacia las 15:10–15:25 OrbStack trabó la
   creación de contenedores (un `docker run alpine echo` tardó 2:57); se
   recuperó solo.
+- 2026-10-03: obrero fresco; cerrado lo que era de la rama, queda lo de Yonatan.
+  Rama `tarea/bump-gemas` del repo de la app (worktree
+  `~/Developer/worktrees/advance_fitness_app--bump-gemas`, SIN merge ni push),
+  rebasada sin conflictos sobre main local 664ec64: 10 commits, 0 detras de
+  main. Los shas de arriba cambiaron por el rebase: 8018e71 thruster · b458924
+  bootsnap · 4c354e8 image_processing · e5b0ec9 omniauth · ac643ce selenium +
+  simplecov · b4224c5 rubocop · c8b553d parches · a4dcc2a 422 · 3adf71c
+  solid_queue 1.7.0 (ex-WIP bcd6324, mensaje reescrito sin "WIP") · effe982
+  brakeman 8.1.0. Hecho: (1) recurring_spec arreglado: escribe la seccion
+  production a un Tempfile YAML y pasa la ruta; ademas afirma que el scheduler
+  cargo las tareas (un YAML vacio validaba en vacio) y llama a valid? antes
+  del expect (el mensaje de be_valid salia vacio). Los ejemplos pasaron de
+  :21/:27 a :26/:39. (2) Pruebas negativas, cada una con el archivo tocado y
+  restaurado: sobre el spec original `2 examples, 1 failure` en :21 con
+  `TypeError: Pathname.new requires a String, #to_path or #to_str`; clase
+  VencerMembresiaJob -> `Invalid recurring tasks:\n- vencer_membresias: Class
+  name doesn't correspond to an existing class`; `4am UTC` -> `got: ...
+  vencer_membresias: "23:00"` vs `expected ... "04:00"` en :39; Tempfile
+  vacio -> rojo en la afirmacion de tareas cargadas. Verde: `2 examples, 0
+  failures`. (3) `dip test` (sobre 3adf71c): `1026 examples, 0 failures`
+  (3 min 41.3 s, cobertura 94.95%); `dip rubocop`: `411 files inspected, no
+  offenses detected`. Brakeman: `bin/brakeman` usa --ensure-latest y con 8.0.6
+  `dip brakeman` salia con exit 5 sin escanear ("Brakeman 8.0.6 is not the
+  latest version 8.1.0"; main tambien); el escaneo directo con 8.0.6 dio
+  `Security Warnings: 0`; bumpeado a 8.1.0 (effe982, solo cambia Gemfile.lock):
+  `Errors: 0`, `Security Warnings: 0`, `Ignored Warnings: 1`, exit 0. La suite
+  NO se re-corrio tras effe982 (gema de desarrollo, solo lock). Medido tambien
+  `dip bundle outdated` (primeras 30 filas) sobre el arbol final: ya no esta
+  al dia con lo del 23-sep: rails y sus 11 gemas 8.1.3.1 -> 8.1.4 (patch,
+  entra), image_processing 2.2.0, selenium 4.50.0, simplecov 1.3.2, pg 1.7.0,
+  solid_cable 4.1.0, net-smtp 0.5.2, parallel 2.3.0, rdoc 8.1.0,
+  regexp_parser 2.13.1; json 3.0.2, marcel 2.1.0 y diff-lcs 2.0.0 siguen sin
+  adoptar a proposito. Faltan, para una sesion fria tras el merge: un segundo
+  barrido de bumps (patch de Rails 8.1.4 primero) y la adopcion de features
+  con su nota en el SDD. APARCA PARA YONATAN (desbloquea: Yonatan): merge de
+  `tarea/bump-gemas` (app) a main, push, cerrar los PRs de dependabot #44 #64
+  #66 #67 #68 #69 #71 #72 con el sha del merge (#64 brakeman 8.0.6 queda
+  obsoleto por effe982), desmontar los worktrees, y mergear esta misma tarea
+  (rama `tarea/bump-gemas` del repo exterior). Para el deploy de Kamal: corre la
+  migracion de batches en la base de cola (Supabase). Es de dependencias y
+  cola: no toca autorizacion, tenencia, dinero ni identidad.

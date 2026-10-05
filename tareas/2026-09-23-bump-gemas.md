@@ -1,5 +1,5 @@
 ---
-estado: bloqueada
+estado: hecha
 dueño: sesión
 fecha: 2026-09-23
 tema: actualizar las gemas atrasadas de la app y aprovechar lo que traigan los bumps
@@ -118,3 +118,4 @@ Cuidados:
   (rama `tarea/bump-gemas` del repo exterior). Para el deploy de Kamal: corre la
   migracion de batches en la base de cola (Supabase). Es de dependencias y
   cola: no toca autorizacion, tenencia, dinero ni identidad.
+- 2026-10-05: visto de Yonatan: mergeada a main de la app (466365c..effe982) y del exterior (39cfc4b..17298c8); suite 1067/0 con rubocop y brakeman en verde sobre la cadena bump-gemas → perfil-juego. Push, cierre de los PRs de dependabot y el deploy (migración de batches en la cola) los hace Yonatan; el segundo barrido de bumps (Rails 8.1.4, pg 1.7.0, solid_cable 4.1.0…) es tarea aparte → hecha.
